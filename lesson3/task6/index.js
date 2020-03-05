@@ -1,11 +1,11 @@
 /* Этот код менять не нужно */
-const defaultUserName = 'anonymus';
-const userName = 'John';
 const anotherUser = null;
+const defaultUserName = 'anonymus';
 const isAdmin = false;
+const isLoggedIn = Boolean(userName);
 const message = 'text';
 const anotherMessage = 'text as well';
-const isLoggedIn = Boolean(userName);
+const userName = 'John';
 
 
 const activeUser = anotherUser || defaultUserName;
