@@ -1,12 +1,12 @@
-function getSum(num1, num2) {
-    let sum = 0;
-    for (let i = num1; i <= num2; i++) {
-        if (i % 2 === 0) {
-            sum = sum + i;
+function getSum(num1, num2) {           // обьявил функцию с двумя аргументами . (от и до )
+    let sum = 0;                         //    обьявил переменную  внуктри функции , которая будет возвращать сумму всех четных чисел  
+    for (let i = num1; i <= num2; i++) {  //   проходим циклом от нам1 до нам2 
+        if (i % 2 === 0) {                  // если на этой остаток от деления ноль 
+            sum = sum + i;                  //  прибавляем к сумме 
             // console.log(sum);
         }
     }
-    return sum;
+    return sum;                             // возвращаем тотал сумму из функции 
 }
 
 console.log(getSum(5, 78));
