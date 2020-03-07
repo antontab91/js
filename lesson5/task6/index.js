@@ -6,4 +6,3 @@ function getPrimes(n) {
     }
 }
 
-console(getPrimes(52));
