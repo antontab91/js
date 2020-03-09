@@ -1,11 +1,11 @@
-function checkSum(arr) {
-    if (!Array.isArray(arr)) {
+function checkSum(arr) {         // обьявляю функцию , которая принимает лдин аргумент 
+    if (!Array.isArray(arr)) {      // если аргумент не массив - вернуть ноль 
         return null;
     }
-    let elementsSumm = 0;
-    for (let num of arr) {
-        elementsSumm = elementsSumm + num;
+    let elementsSumm = 0;        // создаю переменную , куда буду записывать сумму элементов массива  
+    for (let num of arr) {          // прохожусь циклом 
+        elementsSumm = elementsSumm + num;   // записываю сумму элементов в переменную обьявленную ранее 
     }
 
-    return (elementsSumm > 100) ? true : false;
+    return (elementsSumm > 100) ? true : false;   // возвращаю тру или фолс в зависимости от того больше ли сумма всех элементов от ста или нет 
 }
