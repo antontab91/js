@@ -6,4 +6,4 @@ function getArrayBounds(arr) {
 }
 
 
-console.log(getArrayBounds([12, 45, 45, 78, 56, 4, 787]));
+// console.log(getArrayBounds([12, 45, 45, 78, 56, 4, 787]));
