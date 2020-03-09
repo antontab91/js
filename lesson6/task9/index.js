@@ -4,7 +4,6 @@ function reverseArray(arr) {
     if (!Array.isArray(arr)) {
         return null;
     }
-
     let newArr = arr.reverse();
     return newArr;
 }
