@@ -5,11 +5,14 @@ function increaseEvenEl(arr, delta) {
     if (!Array.isArray(arr)) {
         return null;
     }
-    let newArr = arr;
-    for (let num of arr) {
-        if (arr[num] % 2 === 0) {
-            newArr[num] = arr[num] + delta;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            arr[i] = arr[i] + delta;
+            // console.log(arr[i] + delta);
         }
     }
+    return arr;
 }
+
+console.log(increaseEvenEl(arr, 20));
 
