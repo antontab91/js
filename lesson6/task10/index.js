@@ -1,4 +1,6 @@
 function cloneArr(arr) {
-    let newArr = arr;
-    return newArr;
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i]);
+    }
 }
