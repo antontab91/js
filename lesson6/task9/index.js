@@ -8,5 +8,6 @@ function reverseArray(arr) {
     let newArr = arr.reverse();
     return newArr;
 }
-
+reverseArray(arr);
+console.log(arr);
 console.log(reverseArray(arr));
