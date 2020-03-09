@@ -1,18 +1,22 @@
 let arr = [4, 45, 12, 45, 4, 6, 8, 7];
 
 
-function increaseEvenEl(arr, delta) {
-    if (!Array.isArray(arr)) {
+function increaseEvenEl(arr, delta) {  //обьявляю функцию , которая принимает 2 аргумента (массив и число на которое буду увеличивать четные элементы этого массива)
+    if (!Array.isArray(arr)) {          // проверяю если первый аргумент не масси - значит возвращаю ноль
         return null;
     }
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0) {
-            arr[i] = arr[i] + delta;
+    for (let i = 0; i < arr.length; i++) {   // перебераю с помощью цикла фор , тк нужні индексы єлемента 
+        if (arr[i] % 2 === 0) {               // если элемент массива четный 
+            arr[i] = arr[i] + delta;            // значит этот элемент перезаписываем с прибавлением дельта (второго аргумента родительской функции )
             // console.log(arr[i] + delta);
         }
     }
-    return arr;
+    return arr;                                  // возвращаю измененный массив 
 }
 
-console.log(increaseEvenEl(arr, 20));
+increaseEvenEl(arr, 20);
+// console.log(increaseEvenEl(arr, 20));
+
+console.log(arr);
+
 
