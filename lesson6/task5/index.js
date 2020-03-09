@@ -1,5 +1,4 @@
 createEmptyArray(len){
-    let arr = [];
-    arr.length = len;
-    return arr;
+    var arr = new Array(len);
+    return len;
 }
