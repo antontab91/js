@@ -1,4 +1,4 @@
-let arr = [656, 1, 545, 87, 8787, 52];
+const arr = [656, 1, 545, 87, 8787, 52];
 
 function reverseArray(arr) {
     if (!Array.isArray(arr)) {
