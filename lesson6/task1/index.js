@@ -1,4 +1,4 @@
-function getArrayBounts(arr) {
+function getArrayBoudts(arr) {
     if (!arr.isArray) {
         return null;
     }
@@ -6,4 +6,4 @@ function getArrayBounts(arr) {
 }
 
 
-console.log(getArrayBounts([12, 45, 45, 78, 56, 4, 787]));
+console.log(getArrayBoudts([12, 45, 45, 78, 56, 4, 787]));
