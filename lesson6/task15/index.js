@@ -31,7 +31,6 @@ function withdraw(clients, balances, client, amount) {   // обьявляю ф�
 
     return balances[currentIndex] = diff;                               // если у человека не получился отрицательный баланс значит его баланс равен разнице 
 
-    return diff;
 }
 
 
