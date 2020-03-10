@@ -5,3 +5,4 @@ function getSpecialNumbers(arr) {
 }
 
 console.log(getSpecialNumbers(arr));
+console.log(arr);
