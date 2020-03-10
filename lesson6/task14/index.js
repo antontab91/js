@@ -1,6 +1,6 @@
 let array = [0.32, 0.32, 45, 454, 45, 4545, 45];
 
-function uniqueCount(array) {
+function removeDuplicates(array) {
     let result = [];
     for (let i = 0; i < array.length; i++) {
         if (!inArray(result, array[i])) {
@@ -20,4 +20,4 @@ function inArray(array, elem) {
     return false;
 }
 
-console.log(uniqueCount(array));
+console.log(removeDuplicates(array));
