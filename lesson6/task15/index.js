@@ -1,7 +1,7 @@
 let clients = ['Ann', 'John', 'User'];
 let balances = [1400, 87, -6];
 
-unction withdraw(clients, balances, client, amount) {
+function withdraw(clients, balances, client, amount) {
     let currentIndex;
     for (let i = 0; i < clients.length; i++) {
         if (clients[i] === client) {
@@ -14,5 +14,5 @@ unction withdraw(clients, balances, client, amount) {
     return balances[currentIndex] || -1;
 }
 
-withdraw(clients, balances, 'John', 50);
+withdraw(clients, balances, 'John', 95);
 console.log(balances);
