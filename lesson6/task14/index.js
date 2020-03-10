@@ -1,4 +1,4 @@
-let array = [0.32, 0.32, 45, 454, 45, 4545, 45];
+let array = [0.32, 0.32, 45, 454, 45, 4545, 45];       //  массив , который буду проверять на дубликаты
 
 function removeDuplicates(array) {
     let result = [];
