@@ -10,7 +10,7 @@ function uniqueCount(array) {
             result.push(array[i]);
         }
     }
-    return result;
+    return result.length;
 }
 
 function inArray(array, elem) {
