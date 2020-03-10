@@ -1,20 +1,18 @@
 let clients = ['Ann', 'John', 'User'];
 let balances = [1400, 87, -6];
 
-
-function withdraw(clients, balances, client, amount) {
+unction withdraw(clients, balances, client, amount) {
+    let currentIndex;
     for (let i = 0; i < clients.length; i++) {
-        if (balances[i] < amount) {
-            console.log("assa");
-            return -1;
-        }
         if (clients[i] === client) {
-            balances[i] = balances[i] - amount;
-            console.log(balances[i]);
+            if (balances[i] - amount >= 0) {
+                balances[i] = balances[i] - amount;
+                currentIndex = i;
+            }
         }
     }
-    return balances;
+    return balances[currentIndex] || -1;
 }
 
-withdraw(clients, balances, 'John', 95);
+withdraw(clients, balances, 'John', 50);
 console.log(balances);
