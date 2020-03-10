@@ -11,7 +11,6 @@ function withdraw(clients, balances, client, amount) {
             }
         }
     }
-    r
 }
 
 withdraw(clients, balances, 'John', 95);
