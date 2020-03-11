@@ -1,10 +1,10 @@
 arr = [2, 5, 6, 3];
 
 function arrAverage(arr) {
-
-    return arr.reduce(function (acc, num) {
-        return (acc + num) / arr.length;
+    let sum = arr.reduce(function (acc, num) {            // присвоил сумму переменной , сумму всего массива ищу с помощью метрода редьюс 
+        return acc + num;
     })
+    return sum / arr.length;                             // чтобы найти общее кратное делю сумму на длинну массива 
 }
 
 
