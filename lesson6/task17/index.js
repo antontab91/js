@@ -1,10 +1,8 @@
 function includes(arr, value) {
-    return arr.find(function (num) {
-        if (num === value) {
-            return true;
-        } else {
-            return false;
-        }
+    return arr.some(function (num) {
+        // console.log(num);
+        // console.log(value);
+        return num === value;
     });
 }
 
