@@ -16,6 +16,9 @@ function withdraw(clients, balances, client, amount) {
     let currentIndex = clients.indexOf(client);
     // console.log(currentIndex)
     let diference = balances[currentIndex] - amount;
+    if (diference < 1) {
+        return -1;
+    }
     balances[currentIndex] = diference;
     return balances[currentIndex];
 }
