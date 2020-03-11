@@ -4,7 +4,7 @@ function reverseArray(arr) {
     if (!Array.isArray(arr)) {
         return null;
     }
-    return arr.reverse();
+    return arr.slice().reverse();
 }
 
 console.log(reverseArray(arr));
