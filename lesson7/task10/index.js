@@ -1,5 +1,3 @@
-let arr = [102, 21, 1, 12, 23, 3, 12, 47, 7, 412, 12, 56];
-
 function sum(arr) {
     if (!Array.isArray(arr)) {
         return -1;
@@ -9,4 +7,4 @@ function sum(arr) {
     })
 }
 
-console.log(sum(arr));
+console.log(sum([2, 5, 6, 3, 0, 3, -1]));
