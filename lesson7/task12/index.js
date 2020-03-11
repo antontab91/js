@@ -1,4 +1,4 @@
-arr = [2, 5, 6, 3];
+let arr = [2, 5, 6, 3];
 
 function arrAverage(arr) {
     if (!Array.isArray(arr)) {
