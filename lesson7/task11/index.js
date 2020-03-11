@@ -1,7 +1,7 @@
-function filterNames(arr, text) {
-    return arr.filter(function (value) {
-        if (value.length > 5) {
-            return value.indexOf(text) != -1;
+function filterNames(arr, text) {  // функция принимает массив строк и ключь по которому нужно найти определенные строки 
+    return arr.filter(function (name) { // к масиву применю метод фильтр , колбек функция принимает имя 
+        if (name.length > 5) {          // если имя юольше чем из 5 символов 
+            return name.indexOf(text) != -1;    // возвращаю имя в котором есть совпадение с ключем , тоесть не равно -1        (-1 - это когда нет совпадения)
         }
     })
 }
