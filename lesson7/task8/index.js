@@ -4,9 +4,12 @@ function cloneArr(arr) {
     if (!Array.isArray(arr)) {
         return null;
     }
-    let newArr = [...arr];
-    console.log(arr);
-    return newArr;
+    // let newArr = [...arr];
+    // console.log(arr);
+    // return newArr;
+
+    console.log(arr.slice())
+    return arr.slice();
 }
 
 cloneArr(arr);
