@@ -1,6 +1,8 @@
 function filterNames(arr, text) {
     return arr.filter(function (value) {
-        return value.indexOf(text) != -1;
+        if (value.length > 5) {
+            return value.indexOf(text) != -1;
+        }
     })
 }
 
