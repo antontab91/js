@@ -1,9 +1,7 @@
 function includes(arr, value) {
-    return arr.map(function (num) {
-        if (num === value) {
-            return true;
-        } else {
-            return false;
-        }
-    })
+    return arr.find(function (num) {
+        return num === value;
+    });
 }
+
+console.log(includes([1, 4, 8, 3], 3));
