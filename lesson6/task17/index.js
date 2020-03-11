@@ -1,5 +1,7 @@
 function includes(arr, value) {
     return arr.find(function (num) {
+        // console.log(num);
+        // console.log(value);
         return num === value;
     });
 }
