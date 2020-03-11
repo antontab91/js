@@ -11,4 +11,5 @@ function arrAverage(arr) {
 }
 
 
+console.log(arrAverage(arr));
 
