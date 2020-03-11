@@ -1,11 +1,15 @@
-let arr = [45, 5, 45, 12, 485, 87, 87845, 45, 12, 56, 896, 89];
+let arr = [1, 2, 5, 45, 12, 4, 7, 78, 3, 12, 56, 96, 89];
 
 function increaseEvenEl(arr, delta) {
-    return arr.map(function (elem) {
+
+    return arr.map(function (elem, index, wholeArr) {
         if (elem % 2 === 0) {
-            return elem + delta;
+            return wholeArr[index] = elem + delta;
+        } else {
+            return elem;
         }
     })
+
 }
 
-console.log(increaseEvenEl(arr));
+console.log(increaseEvenEl(arr, 5));
