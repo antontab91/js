@@ -5,7 +5,8 @@ function reverseArray(arr) {
         return null;
     }
     let newArr = [...arr];
-    return newArr.slice().reverse();
+    // return arr.slice().reverse();
+    return newArr.reverse();
 }
 
 console.log(reverseArray(arr));
