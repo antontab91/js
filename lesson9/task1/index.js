@@ -35,4 +35,3 @@ const getAdults = obj => {
         .filter(item => item[1] >= 18)
         .map(elem => elem[0]);
 }
-console.log(getAdults({}));
