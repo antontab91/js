@@ -22,12 +22,16 @@
 
 
 
-function getAdults(obj) {
-    let userNames = Object.entries(obj)
-        .filter(person => person[1] >= 18)
-        .map(name => name[0]);
-    return userNames;
-}
+// function getAdults(obj) {
+//     let userNames = Object.entries(obj)
+//         .filter(person => person[1] >= 18)
+//         .map(name => name[0]);
+//     return userNames;
+// }
 
 
-console.log(getAdults({}));
+// console.log(getAdults({}));
+
+const getAdults = usersObj => Object.entries(usersObj)
+    .filter(user => user[1] >= 18)
+    .map(user => user[0]);
