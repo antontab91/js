@@ -6,13 +6,13 @@ const obj = {
 
 
 function getAdults(obj) {
-    let usersArray = Object.entries(obj);
-    let filteredUsers = usersArray.filter(function (user) {
+    const usersArray = Object.entries(obj);
+    const filteredUsers = usersArray.filter(function (user) {
         if (user[1] >= 18) {
             return user;
         }
     })
-    let userNames = filteredUsers.map(function (user) {
+    const userNames = filteredUsers.map(function (user) {
         return user[0];
     })
     return userNames;
