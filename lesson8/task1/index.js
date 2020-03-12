@@ -1,3 +1,3 @@
 function transformToObject(arr) {
-    return arr.transformToObject;
+    return arr.transformToObject();
 }
