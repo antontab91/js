@@ -1,9 +1,13 @@
 function transformToObject(arr) {
     let obj = {};
 
-    arr.array.forEach(element => {
+    arr.forEach(element => {
         obj[element] = element;
     });
 
     return obj;
 }
+
+let arr = ['text', 12];
+
+console.log(transformToObject(arr));
