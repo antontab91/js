@@ -3,5 +3,7 @@ function concatProps(obj) {
     for (let value in obj) {
         arr.push(value);
     }
-    return arr;
+    return arr.reduce(function (acc, num) {
+        return acc + num;
+    });
 }
