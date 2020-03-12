@@ -1,9 +1,13 @@
+let obj = { name: 'John Doe', age: 17, interest: 'football' }
+
+
 function concatProps(obj) {
     let arr = [];
     for (let value in obj) {
-        arr.push(value);
+        // console.log(obj[value]);
+        arr.push(obj[value]);
     }
-    return arr.reduce(function (acc, num) {
-        return acc + num;
-    });
+    return arr;
 }
+
+console.log(concatProps(obj));
