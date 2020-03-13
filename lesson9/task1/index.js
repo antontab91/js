@@ -5,23 +5,39 @@ const obj = {
 };
 
 
-function getAdults(obj) {
-    const usersArray = Object.entries(obj);
-    const filteredUsers = usersArray.filter(function (user) {
-        if (user[1] >= 18) {
-            return user;
-        }
-    })
-    const userNames = filteredUsers.map(function (user) {
-        return user[0];
-    })
+// function getAdults(obj) {
+//     const usersArray = Object.entries(obj);
+//     const filteredUsers = usersArray.filter(function (user) {
+//         if (user[1] >= 18) {
+//             return user;
+//         }
+//     })
+//     const userNames = filteredUsers.map(function (user) {
+//         return user[0];
+//     })
 
-    return userNames;
-}
+//     return userNames;
+// }
 
 // const getAdults = userObj => Object.entries(userObj)
 //     .filter(user => user[1] >= 18)
 //     .map(user => user[0]);
 
+
+
+
+
+
+function getAdults(obj) {
+    return Object.entries(obj).filter(function (element) {
+        return element[1] >= 18;
+    }).map(function (item) {
+        return item[0]
+    });
+}
+
+
 console.log(getAdults(obj));
+
+
 
