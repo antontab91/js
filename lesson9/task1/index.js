@@ -19,14 +19,6 @@ const obj = {
 //     return userNames;
 // }
 
-// const getAdults = userObj => Object.entries(userObj)
-//     .filter(user => user[1] >= 18)
-//     .map(user => user[0]);
-
-
-
-
-
 
 function getAdults(obj) {
     return Object.entries(obj).filter(function (element) {
