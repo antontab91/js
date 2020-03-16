@@ -21,5 +21,6 @@ const key = 'operation';
 console.log(transaction[key]);
 
 /* выведите в консоль значение свойства 'company' используя квадратные скобки */
+
 console.log(transaction.agent['company']);
 
