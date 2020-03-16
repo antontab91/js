@@ -18,7 +18,7 @@ function addPropertyV3(obj, key, value) {
 };
 
 function addPropertyV4(obj, key, value) {
-    return Object.assign({}, { ...transaction }, { [key]: value });
+    return Object.assign({ ...obj }, { [key]: value });
 };
 
 
