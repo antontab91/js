@@ -4,8 +4,15 @@ const obj = {
 };
 
 
+// function getKeys(obj) {
+//     return Object.keys(obj).map(function (item) {
+//         console.log(item);
+//         return item;
+//     });
+// }
+
 function getKeys(obj) {
-    return Object.keys(obj).map(function (item) {
+    return Object.keys(obj).forEach(function (item) {
         console.log(item);
         return item;
     });
