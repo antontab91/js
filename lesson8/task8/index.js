@@ -8,12 +8,14 @@ function addPropertyV1(userData, userId) {
 function addPropertyV2(userData, userId) {
     return Object.assign(userData, { id: userId })
 }
-function addPropertyV3(userData, userId) {
-    let newObj = { ...userData };
-    return Object.assign(newObj, userId);
-}
-function addPropertyV4(userData, userId) {
 
+function addPropertyV3(userData, userId) {
+    return Object.assign({}, userData, userId);      // тут  векрнул новый обьейкт без мутации старого 
+}
+
+
+function addPropertyV4(userData, userId) {
+    return Object.assign({ ...userData }, userId);   // tut spred operator
 }
 
 
