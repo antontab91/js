@@ -24,7 +24,7 @@ function addPropertyV4(obj, key, value) {
 
 // console.log(addPropertyV1(transaction, 'currency', 'USD'));
 
-console.log(addPropertyV2(transaction, 'currency', 'USD'));
+// console.log(addPropertyV2(transaction, 'currency', 'USD'));
 
 // console.log(addPropertyV3(transaction, 'currency', 'USD'));
 
