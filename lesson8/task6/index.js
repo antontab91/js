@@ -5,11 +5,11 @@ const user = {
 
 /* присвойте объекту свойство hobby со значением 'football' с помощью точки */
 user.hobby = 'football';
-console.log(user['hobby']);
+
 const anotherKey = 'married';
 /* название свойства хранится в переменной anotherKey. Присвойте объекту такое свойство со значением false */
 user[anotherKey] = false;
-console.log(user['married']);
+
 /* присвойте объекту свойство 'favorite music' со значением 'rock' */
 user['favorite music'] = 'rock';
 /* присвойте объекту свойство 'address', которое будет пустым объкетом */
