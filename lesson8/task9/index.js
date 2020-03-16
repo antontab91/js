@@ -1,5 +1,5 @@
 function addPropertyV1(obj, key, value) {
-    obj[key] = value;
+    obj.key = value;
 };
 
 function addPropertyV2(obj, key, value) {
