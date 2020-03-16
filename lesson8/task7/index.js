@@ -1,0 +1,13 @@
+const obj = {
+    name: 'Tom',
+    age: 17,
+};
+
+
+function getKeys(obj) {
+    return Object.keys(obj).map(function (item) {
+        return item;
+    });
+}
+
+console.log(getKeys(obj));
