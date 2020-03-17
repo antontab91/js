@@ -1,4 +1,8 @@
 function multiRound(num) {
+    if (!Number.isFinite(num)) {
+        return null;
+    }
+
     let newArr = [];
     newArr.push(Math.floor(num));
     newArr.push(Math.round(num));
