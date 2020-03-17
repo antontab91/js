@@ -5,7 +5,7 @@ function getTotalPrice(arr) {
         return acc + Math.abs(num);
     })
     console.log(Math.floor(summ * 100) / 100);
-    return Math.floor(summ * 100) / 100;
+    return '$' + Math.floor(summ * 100) / 100;
 }
 
 getTotalPrice(arr);
