@@ -6,7 +6,7 @@ function getRandomNumbers(len, min, max) {
     let result = [];
 
     for (let i = 0; i < len; i++) {
-        result.push(Math.trunc(Math.random() * (max - min) + min));
+        result.push(Math.trunc(Math.random() * (max - min + 1)) + min);
     }
 
     console.log(result);
