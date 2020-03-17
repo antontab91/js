@@ -4,11 +4,11 @@ function getRandomNumbers(len, min, max) {
     console.log(masLen);
 
     for (let i = 0; i < masLen; i++) {
-        result.push(Math.random() * (max - min) + min);
+        result.push(Math.ceil(Math.random() * (max - min) + min));
     }
 
     console.log(result);
     return result;
 }
 
-getRandomNumbers(2, 45, 54);
+getRandomNumbers(80, 45, 54);
