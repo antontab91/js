@@ -1,6 +1,6 @@
 let arr = [65, 62, -78.54, -56, -212, 45.12];
 
-function getMaxAbsoluteNumber() {
+function getMaxAbsoluteNumber(arr) {
     if (!Array.isArray(arr) || arr.length <= 0) {
         return null;
     }
@@ -14,4 +14,4 @@ function getMaxAbsoluteNumber() {
     return bigestNum;
 };
 
-console.log(getMaxAbsoluteNumber(arr));
+console.log(getMaxAbsoluteNumber([]));
