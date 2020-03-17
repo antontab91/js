@@ -1,15 +1,15 @@
 function multiRound(num) {
-    if (!Number.isFinite(num)) {
+    if (!isFinite(num)) {
         return null;
     }
 
     let newArr = [];
-    newArr.push(Math.floor(num));
-    newArr.push(Math.round(num));
-    newArr.push(Math.ceil(num));
-    newArr.push(Math.trunc(num))
+    newArr.push(Math.floor(num * 100) / 100);
+    newArr.push(Math.round(num * 100) / 100);
+    newArr.push(Math.ceil(num * 100) / 100);
+    newArr.push(Math.trunc(num * 100) / 100)
     newArr.push(num.toFixed(2))
     return newArr;
 }
 
-console.log(multiRound(-17.25));
+console.log(multiRound(56.6164565));
