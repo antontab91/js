@@ -22,13 +22,14 @@ function compareObjects(obj1, obj2) {
     // return (JSON.stringify(obj1) === JSON.stringify(obj2));
 
     let newObj1 = Object.entries(obj1).flat();
-    console.log(newObj1);
+    // console.log(newObj1);
     let newObj2 = Object.entries(obj2).flat();
-    console.log(newObj2);
+    // console.log(newObj2);
     if (newObj1.length !== newObj2.length) {
         return false;
     }
     for (let i = 0; i < obj2.length; i++) {
+        console.log(obj1[i])
         if (obj1[i] !== obj2[i]) {
             return false;
         }
@@ -44,5 +45,5 @@ function compareObjects(obj1, obj2) {
 
 
 console.log(compareObjects(obj1, obj2)); // false/
-console.log(compareObjects(obj2, obj3)); // false
-console.log(compareObjects(obj1, obj4)); // true/
+// console.log(compareObjects(obj2, obj3)); // false
+// console.log(compareObjects(obj1, obj4)); // true/
