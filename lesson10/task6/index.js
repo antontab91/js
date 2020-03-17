@@ -4,7 +4,7 @@ function getRandomNumbers(len, min, max) {
     console.log(masLen);
 
     for (let i = 0; i < masLen; i++) {
-        result.push(Math.ceil(Math.random() * (max - min) + min));
+        result.push(Math.trunc(Math.random() * (max - min) + min));
     }
 
     console.log(result);
