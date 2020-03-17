@@ -25,7 +25,6 @@ function getMaxAbsoluteNumber(arr) {
         if (Math.abs(num) > bigestNum) {
 
             bigestNum = Math.abs(num);
-
         }
     })
 
