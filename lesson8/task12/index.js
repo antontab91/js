@@ -27,7 +27,7 @@ function compareObjects(obj1, obj2) {
         return false;
     }
 
-    for (let i of objKeys1) {
+    for (let key of objKeys1) {
         if (obj1[key] !== obj2[key]) {
             return false;
         }
