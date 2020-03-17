@@ -6,21 +6,21 @@ function getFiniteNumbers(arr) {
     });
 }
 
-// function getFiniteNumbersV2() {
+function getFiniteNumbersV2() {
 
-// }
+}
 
-// function getNaN() {
+function getNaN() {
 
-// }
+}
 
-// function getNaNV2() {
+function getNaNV2() {
 
-// }
+}
 
-// function getIntegers() {
+function getIntegers() {
 
-// }
+}
 
 
 console.log(getFiniteNumbers(arr));
