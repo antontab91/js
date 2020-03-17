@@ -1,9 +1,9 @@
 function multiRound(num) {
-    if (!isFinite(num)) {
-        return null;
-    }
 
-    let newArr = [];
+
+    let newArr = [
+
+    ];
     newArr.push(Math.floor(num * 100) / 100);
     newArr.push(Math.round(num * 100) / 100);
     newArr.push(Math.ceil(num * 100) / 100);
