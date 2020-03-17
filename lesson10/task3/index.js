@@ -7,8 +7,8 @@ function multiRound(num) {
     newArr.push(Math.floor(num * 100) / 100);
     newArr.push(Math.round(num * 100) / 100);
     newArr.push(Math.ceil(num * 100) / 100);
-    newArr.push(Math.trunc(num * 100) / 100)
-    newArr.push(num.toFixed(2))
+    newArr.push(Math.trunc(num * 100) / 100);
+    newArr.push(num.toFixed(2));
     return newArr;
 }
 
