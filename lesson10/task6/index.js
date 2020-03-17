@@ -8,6 +8,7 @@ function getRandomNumbers(len, min, max) {
     }
 
     console.log(result);
+    return result;
 }
 
 getRandomNumbers(2, 45, 54);
