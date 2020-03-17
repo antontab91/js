@@ -1,7 +1,13 @@
 function getRandomNumbers(len, min, max) {
+    if (len <= 0 || min > max) {
+        console.log(null);
+        return null;
+    }
+
     let result = [];
     masLen = Math.round(len);
     console.log(masLen);
+
 
     for (let i = 0; i < masLen; i++) {
         result.push(Math.trunc(Math.random() * (max - min) + min));
