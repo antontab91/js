@@ -18,10 +18,22 @@ const obj4 = {
 };
 
 function compareObjects(obj1, obj2) {
-    console.log(JSON.stringify(obj1) === JSON.stringify(obj2));  // в гугле подсмотрел  Object.toJSON(user1) == Object.toJSON(user2);  , но  Object.toJSON не заработало потом мдн  https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-    return (JSON.stringify(obj1) === JSON.stringify(obj2));
+    // console.log(JSON.stringify(obj1) === JSON.stringify(obj2));  // в гугле подсмотрел  Object.toJSON(user1) == Object.toJSON(user2);  , но  Object.toJSON не заработало потом мдн  https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+    // return (JSON.stringify(obj1) === JSON.stringify(obj2));
+    let objKeys1 = Object.keys(obj1);
+    let objKeys2 = Object.keys(obj2);
 
+    if (objKeys1.length !== objKeys2.length) {
+        return false;
+    }
 
+    for (let i of objKeys1) {
+        if (obj1[key] !== obj2[key]) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 console.log(compareObjects(obj1, obj2)); // false/
