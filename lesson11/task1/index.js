@@ -1,4 +1,4 @@
-function splitText(string, len) {
+function splitText(string, len = 10) {
     console.log()
     if (typeof (string) !== 'string') {
         return null;
