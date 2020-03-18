@@ -1,5 +1,5 @@
 function splitText(string, len = 10) {
-    console.log()
+    console.log((typeof (string) !== 'string'))
     if (typeof (string) !== 'string') {
         return null;
     }
