@@ -7,13 +7,13 @@ function splitText(text, len) {
     let startPosition = 0;
     while (true) {
         let chuck = text.substr(0, len);
+        if (chuck.length === 0) {
+            break;
+        }
         strArr.push(chuck[0].toUpperCase() + chuck.slice(1));
 
         startPosition = startPosition + len;
 
-        if (chuck.length === 0) {
-            break;
-        }
     }
 
     return strArr.join('\n');
