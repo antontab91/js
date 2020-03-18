@@ -1,6 +1,4 @@
-
-
-function splitText(string, len) {
+function splitText(string, len = 10) {
     console.log()
     if (typeof (string) !== 'string') {
         return null;
@@ -20,4 +18,4 @@ function splitText(string, len) {
 // console.log(splitText(1452, 444))
 // splitText("banani lopala bomba ee , бананы лопала бомба олрайт ", 5);
 
-console.log(splitText("sa5assasa", 5))
+// console.log(splitText("sa5assasa", 5))
