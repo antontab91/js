@@ -1,5 +1,5 @@
-function splitText(string, len = 10) {           // длинна = 10 пришлось подсмотреть . тк это вообще не понятно почему не проходила проверка 
-    // console.log((typeof (string) !== 'string'));
+function splitText(string, len = 10) {
+    sa
     if (typeof (string) !== 'string') {
         return null;
     }
