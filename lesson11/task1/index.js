@@ -22,6 +22,6 @@ function splitText(text, len) {
 }
 
 // console.log(splitText(1452, 444))
-splitText("banani lopala bomba ee , бананы лопала бомба олрайт ", 5);
+// splitText("banani lopala bomba ee , бананы лопала бомба олрайт ", 5);
 
 console.log(splitText("banani lopala bomba ee , бананы лопала бомба олрайт ", 5))
