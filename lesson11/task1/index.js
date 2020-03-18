@@ -6,7 +6,7 @@ function splitText(text, len) {
     let strArr = [];
     let startPosition = 0;
     while (true) {
-        let chuck = text.substr(0, len);
+        let chuck = text.substr(startPosition, len);
         if (chuck.length === 0) {
             break;
         }
