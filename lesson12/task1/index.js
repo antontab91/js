@@ -1,5 +1,6 @@
 function calc(str) {
-    const [a, operator, b] = str.split(' ');
+    let splitStr = str.split(' ');
+    const [a, operator, b] = [...splitStr];
     let result = 0;
     switch (operator) {
         case '+':
