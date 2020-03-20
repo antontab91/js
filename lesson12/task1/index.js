@@ -15,15 +15,15 @@ function calc(str) {
         case '+':
             result = Number(a) + Number(c);
             break;
-        case ('-'):
+        case '-':
             // console.log('rabotaet -');
             result = Number(a) - Number(c);
             break;
-        case ('*'):
+        case '*':
             // console.log('rabotaet *');
             result = Number(a) * Number(c);
             break;
-        case ('/'):
+        case '/':
             // console.log('rabotaet /');
             result = Number(a) / Number(c);
             break;
