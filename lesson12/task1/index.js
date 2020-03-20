@@ -1,7 +1,7 @@
-// let str1 = '1+2';
-// let str2 = '1-2';
-// let str3 = '1*2';
-// let str4 = '1/2';
+let str1 = '1+2';
+let str2 = '1-2';
+let str3 = '1*2';
+let str4 = '1/2';
 // let str5 = '1%2';
 
 function calc(str) {
@@ -15,10 +15,11 @@ function calc(str) {
     // console.log(b);
     // console.log(c);
 
+
     switch (b) {
         case ('+'):
             // console.log('rabotaet +');
-            // console.log(Number.parseInt(a) + Number.parseInt(c));
+            console.log(Number.parseInt(a) + Number.parseInt(c));
             result = Number.parseInt(a) + Number.parseInt(c);
             break;
         case ('-'):
@@ -34,14 +35,14 @@ function calc(str) {
             result = Number.parseInt(a) / Number.parseInt(c);
             break;
 
-        // default:
-        //     console.log('не та операция')
+        default:
+            console.log('не та операция')
     }
     return result;
 }
 
-// console.log(calc(str1));
-// console.log(calc(str2));
-// console.log(calc(str3));
-// console.log(calc(str4));
-// console.log(calc(str5));
+console.log(calc(str1));
+console.log(calc(str2));
+console.log(calc(str3));
+console.log(calc(str4));
+console.log(calc(str5));
