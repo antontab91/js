@@ -13,7 +13,6 @@ function calc(str) {
     switch (b) {
         case ('+'):
             // console.log('rabotaet +');
-            // console.log(Number.parseInt(a) + Number.parseInt(c));
             result = Number(a) + Number(c);
             break;
         case ('-'):
