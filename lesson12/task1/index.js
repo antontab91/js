@@ -1,19 +1,20 @@
 function calc(str) {
     let splitStr = str.split(' ');
-    const [a, operator, b] = [...splitStr];
+    const [a, b, c] = [...splitStr];
     let result = 0;
-    switch (operator) {
+
+    switch (b) {
         case '+':
-            result = Number(a) + Number(b);
+            result = Number(a) + Number(c);
             break;
         case '-':
-            result = Number(a) - Number(b);
+            result = Number(a) - Number(c);
             break;
         case '*':
-            result = Number(a) * Number(b);
+            result = Number(a) * Number(c);
             break;
         case '/':
-            result = Number(a) / Number(b);
+            result = Number(a) / Number(c);
             break;
     }
     return `${str} = ${result}`;
