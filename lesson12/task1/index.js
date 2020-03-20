@@ -1,12 +1,12 @@
-// let str1 = '1+2';
-// let str2 = '1-2';
-// let str3 = '1*2';
-// let str4 = '1/2';
-// let str5 = '1%2';
+let str1 = '1 + 2';
+let str2 = '1 - 2';
+let str3 = '1 * 2';
+let str4 = '1 / 2';
+let str5 = '1 % 2';
 
 function calc(str) {
     splitStr = str.split(' ');
-    // console.log(splitStr);
+    console.log(splitStr);
 
     [a, b, c] = [...splitStr];
 
@@ -19,7 +19,7 @@ function calc(str) {
     switch (b) {
         case ('+'):
             // console.log('rabotaet +');
-            console.log(Number.parseInt(a) + Number.parseInt(c));
+            // console.log(Number.parseInt(a) + Number.parseInt(c));
             result = Number.parseInt(a) + Number.parseInt(c);
             break;
         case ('-'):
@@ -41,6 +41,7 @@ function calc(str) {
     return result;
 }
 
+calc(str1);
 console.log(calc(str1));
 console.log(calc(str2));
 console.log(calc(str3));
