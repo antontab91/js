@@ -1,9 +1,3 @@
-let str1 = '1 + 2';
-let str2 = '1 - 2';
-let str3 = '1 * 2';
-let str4 = '1 / 2';
-let str5 = '1 % 2';
-
 function calc(str) {
     splitStr = str.split(' ');
     console.log(splitStr);
@@ -41,9 +35,9 @@ function calc(str) {
     return `${str} = ${result}`;
 }
 
-calc(str1);
-console.log(calc(str1));
-console.log(calc(str2));
-console.log(calc(str3));
-console.log(calc(str4));
-console.log(calc(str5));
+// calc(str1);
+// console.log(calc(str1));
+// console.log(calc(str2));
+// console.log(calc(str3));
+// console.log(calc(str4));
+
