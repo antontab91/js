@@ -1,41 +1,21 @@
 function calc(str) {
-    splitStr = str.split(' ');
-    console.log(splitStr);
-
-    const [a, b, c] = [...splitStr];
-
+    const [a, operator, b] = str.split(' ');
     let result = 0;
-    // console.log(a);
-    // console.log(b);
-    // console.log(c);
-
-    switch (b) {
-
+    switch (operator) {
         case '+':
-            result = Number(a) + Number(c);
+            result = Number(a) + Number(b);
             break;
         case '-':
-            // console.log('rabotaet -');
-            result = Number(a) - Number(c);
+            result = Number(a) - Number(b);
             break;
         case '*':
-            // console.log('rabotaet *');
-            result = Number(a) * Number(c);
+            result = Number(a) * Number(b);
             break;
         case '/':
-            // console.log('rabotaet /');
-            result = Number(a) / Number(c);
+            result = Number(a) / Number(b);
             break;
-
-        // default:
-        //     console.log('не та операция')
     }
     return `${str} = ${result}`;
 }
 
-// calc(str1);
-// console.log(calc(str1));
-// console.log(calc(str2));
-// console.log(calc(str3));
-// console.log(calc(str4));
 
