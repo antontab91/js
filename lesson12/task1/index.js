@@ -1,11 +1,11 @@
-let str1 = '1+2';
-let str2 = '1-2';
-let str3 = '1*2';
-let str4 = '1/2';
+// let str1 = '1+2';
+// let str2 = '1-2';
+// let str3 = '1*2';
+// let str4 = '1/2';
 // let str5 = '1%2';
 
 function calc(str) {
-    splitStr = str.split('');
+    splitStr = str.split(' ');
     // console.log(splitStr);
 
     [a, b, c] = [...splitStr];
@@ -35,8 +35,8 @@ function calc(str) {
             result = Number.parseInt(a) / Number.parseInt(c);
             break;
 
-        default:
-            console.log('не та операция')
+        // default:
+        //     console.log('не та операция')
     }
     return result;
 }
