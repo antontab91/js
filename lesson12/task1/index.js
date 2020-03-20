@@ -9,7 +9,6 @@ function calc(str) {
     // console.log(b);
     // console.log(c);
 
-
     switch (b) {
 
         case '+':
