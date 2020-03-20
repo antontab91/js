@@ -11,8 +11,8 @@ function calc(str) {
 
 
     switch (b) {
-        case ('+'):
-            // console.log('rabotaet +');
+
+        case '+':
             result = Number(a) + Number(c);
             break;
         case ('-'):
