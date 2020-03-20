@@ -8,9 +8,9 @@ function calc(str) {
     splitStr = str.split(' ');
     console.log(splitStr);
 
-    [a, b, c] = [...splitStr];
+    const [a, b, c] = [...splitStr];
 
-    let result;
+    let result = 0;
     // console.log(a);
     // console.log(b);
     // console.log(c);
@@ -20,25 +20,25 @@ function calc(str) {
         case ('+'):
             // console.log('rabotaet +');
             // console.log(Number.parseInt(a) + Number.parseInt(c));
-            result = Number.parseInt(a) + Number.parseInt(c);
+            result = Number(a) + Number(c);
             break;
         case ('-'):
             // console.log('rabotaet -');
-            result = Number.parseInt(a) - Number.parseInt(c);
+            result = Number(a) - Number(c);
             break;
         case ('*'):
             // console.log('rabotaet *');
-            result = Number.parseInt(a) * Number.parseInt(c);
+            result = Number(a) * Number(c);
             break;
         case ('/'):
             // console.log('rabotaet /');
-            result = Number.parseInt(a) / Number.parseInt(c);
+            result = Number(a) / Number(c);
             break;
 
         // default:
         //     console.log('не та операция')
     }
-    return result;
+    return `${str} = ${result}`;
 }
 
 calc(str1);
