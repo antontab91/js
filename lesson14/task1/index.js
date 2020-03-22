@@ -1,3 +1,5 @@
+'use strict'
+
 let message = 'Just learn it!';
 
 // setMessage('Good job!');
