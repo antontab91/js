@@ -71,7 +71,7 @@ it('should get square array from 1, 2, 3 (test13)', () => {
     const result = squareArray([1, 2, 3]);
     expect(result).toEqual([1, 4, 9]);
 });
-it('should not get null if not array (test14)', () => {
+it('should not get null becouse array (test14)', () => {
     const result = squareArray([4, 3, 2]);
     expect(result).not.toEqual(null);
 });
@@ -157,7 +157,7 @@ it('should get keys (test31)', () => {
     const result = getKeys({ dima: 11, petro: 60, wika: 40 });
     expect(result).toEqual(["dima", "petro", "wika"]);
 });
-it('should not get keys (test32)', () => {
+it('the result should not be like that(test32)', () => {
     const result = getKeys({ dima: 11, petro: 60, wika: 40 });
     expect(result).not.toEqual("masha");
 });
@@ -168,11 +168,11 @@ it('must get keys of obj (test33)', () => {
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
-it('should get new objecr whis keys and values from massives (test34)', () => {
+it('should get new objecе whis keys and values from array (test34)', () => {
     const result = buildObject(["a", " b", "c"], [1, 2, 3]);
     expect(result).toEqual({ a: 1, " b": 2, c: 3 });
 });
-it('should not get new objecr whis keys and values from massives (test35)', () => {
+it('should not get new objecr whis keys and values from array (test35)', () => {
     const result = buildObject(["a", 58, "c"], [1, 2, 3]);
     expect(result).not.toEqual({ a: 1, " b": 2, c: 3 });;
 });
