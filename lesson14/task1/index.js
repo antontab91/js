@@ -2,8 +2,7 @@
 
 let message = 'Just learn it';
 
-// setMessage('Good job!');
-// sendMessage("Anna");
+
 
 export function sendMessage(name) {
     const sender = 'Gromcode';
@@ -14,6 +13,10 @@ export function sendMessage(name) {
 export function setMessage(text) {
     message = text;
 }
+
+// sendMessage("Anna");
+// setMessage('Good job!');
+// sendMessage("Anna");
 
 
 
