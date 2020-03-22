@@ -15,7 +15,7 @@ export function setMessage(text) {
 }
 
 // sendMessage("Anna");
-// setMessage('Good job!');
+// setMessage('Good job');
 // sendMessage("Anna");
 
 
