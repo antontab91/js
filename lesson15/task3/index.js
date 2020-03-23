@@ -13,14 +13,14 @@ export function createLogger() {
         return memory.push({ message: log, dateTime: new Date(), type: 'log' });
     }
 
-    function getRecords(data) {
+    function getRecords(memory) {
         if (data === undefined) {
             return memory;
         }
 
-        // return data.sort(function (a, b) {
-        //     return a.dateTime - b.dateTime;
-        // });
+        return memory.sort(function (a, b) {
+            return a.dateTime - b.dateTime;
+        });
     }
 
     return {
