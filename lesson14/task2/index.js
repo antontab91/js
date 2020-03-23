@@ -1,4 +1,4 @@
-export const createMessenger = () => {
+export default const createMessenger = () => {
     let message = 'Just learn it';
     const sender = 'Gromcode';
 
