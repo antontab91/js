@@ -14,13 +14,26 @@ export function createLogger() {
     }
 
     function getRecords(data) {
-        if (data === undefined) {
-            return memory;
-        }
+        switch (data) {
+            case ('warn'):
+                return memory.filter(function (element) {
+                    element.type === 'warn'
+                });
 
-        return memory.sort(function (a, b) {
-            return a.dateTime - b.dateTime;
-        });
+            case ('error'):
+                return memory.filter(function (element) {
+                    element.type === 'error'
+                });
+
+            case ('log'):
+                return memory.filter(function (element) {
+                    element.type === 'log'
+                });
+
+            case (undefined):
+                return memory;
+
+        }
     }
 
     return {
@@ -31,5 +44,3 @@ export function createLogger() {
     };
 }
 
-// const proverka = createLogger();
-// console.log(proverka.getRecords())
