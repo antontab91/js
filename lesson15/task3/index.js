@@ -14,14 +14,8 @@ export function createLogger() {
     }
 
     function getRecords(data) {
-        if (data === undefined) {
-            return memory;
-        }
-        return memory.filter(function (element) {
-            return element.type === data;
-        }).sort(function (a, b) {
-            a.dateTime - b.dateTime;
-        });
+        return memory.sort((acc, rec) => (acc.dateTime > rec.dateTime));
+
     }
 
     return {
