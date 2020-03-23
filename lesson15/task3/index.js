@@ -17,6 +17,10 @@ export function createLogger() {
         if (data === undefined) {
             return memory;
         }
+
+        return memory.sort(function (a, b) {
+            return a.dateTime - b.dateTime;
+        });
     }
 
     return {
