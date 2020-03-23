@@ -7,10 +7,12 @@ export function add(num) {
 export function decrease(num) {
     return memory - num;
 }
-export function reset() {
-    memory = 0;
+export function reset(num) {
+    memory = 0
     return memory;
 }
 export function getMemo(num) {
     return num;
 }
+
+
