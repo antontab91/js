@@ -15,10 +15,10 @@ export function createLogger() {
 
     function getRecords(type) {
         if (!type) {
-            return memory;
+            return memory.slice().reverse();
         }
         return memory.filter((el) => el.type === type)
-            .sort((a, b) => a.dateTime - b.dateTime);
+            .sort((a, b) => b.dateTime - a.dateTime);
     }
     return {
         warn,
