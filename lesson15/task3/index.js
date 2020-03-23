@@ -14,13 +14,8 @@ export function createLogger() {
     }
 
     function getRecords(data) {
-        if (data === undefined) {
-            return memory;
-        }
-
-        return data.sort(function (a, b) {
-            return a.dateTime - b.dateTime;
-        });
+        if (!data) { return logger };
+        return memory.filter((a) => a.type === data).sort((a, b) => a.dateTime - b.dateTime);
     }
 
     return {
@@ -30,6 +25,3 @@ export function createLogger() {
         getRecords
     };
 }
-
-// const proverka = createLogger();
-// console.log(proverka.getRecords())
