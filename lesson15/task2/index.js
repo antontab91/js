@@ -17,6 +17,7 @@ export function createCalculator(num) {
         return memory;
     }
 
+
     return {
         add,
         decrease,
