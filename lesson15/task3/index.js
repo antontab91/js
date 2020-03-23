@@ -18,9 +18,9 @@ export function createLogger() {
             return memory;
         }
 
-        return data.sort(function (a, b) {
-            return a.dateTime - b.dateTime;
-        });
+        // return data.sort(function (a, b) {
+        //     return a.dateTime - b.dateTime;
+        // });
     }
 
     return {
