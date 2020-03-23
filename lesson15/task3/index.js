@@ -26,3 +26,6 @@ export function createLogger() {
         getRecords
     };
 }
+
+// const proverka = createLogger();
+// console.log(proverka.getRecords())
