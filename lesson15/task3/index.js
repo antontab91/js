@@ -13,11 +13,15 @@ export function createLogger() {
         return memory.push({ message: log, dateTime: new Date(), type: 'log' });
     }
 
-    function getRecords(data) {
-        if (!data) {
+    function getRecords(type) {
+        if (!type) {
             return memory;
         };
-        return memory.filter((a) => a.type === data).sort((a, b) => a.dateTime - b.dateTime);
+        return memory.filter(function (elem) {
+            return elem.type === type
+        }).sort((function (a, b) {
+            returna.dateTime - b.dateTime
+        });
     }
 
     return {
