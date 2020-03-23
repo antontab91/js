@@ -14,26 +14,14 @@ export function createLogger() {
     }
 
     function getRecords(data) {
-        switch (data) {
-            case ('warn'):
-                return memory.filter(function (element) {
-                    element.type === 'warn'
-                });
-
-            case ('error'):
-                return memory.filter(function (element) {
-                    element.type === 'error'
-                });
-
-            case ('log'):
-                return memory.filter(function (element) {
-                    element.type === 'log'
-                });
-
-            case (undefined):
-                return memory;
-
+        if (data === undefined) {
+            return memory;
         }
+        return memory.filter(function (element) {
+            return element.type === data;
+        }).sort(function (a, b) {
+            a.dateTime - b.dateTime;
+        });
     }
 
     return {
@@ -43,4 +31,3 @@ export function createLogger() {
         getRecords
     };
 }
-
