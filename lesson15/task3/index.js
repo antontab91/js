@@ -14,8 +14,10 @@ export function createLogger() {
     }
 
     const getRecords = (type) => {
-        if (!type) { return memory };
-        return memory.filter((a) => a.type === type).sort((a, b) => a.dateTime - b.dateTime);
+        if (!type) {
+            return memory
+        };
+        return memory.filter((el) => el.type === type).sort((a, b) => a.dateTime - b.dateTime);
     }
     return {
         warn,
