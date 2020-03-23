@@ -1,4 +1,4 @@
-function createLogger() {
+export function createLogger() {
     let memory = [];
 
     function warn(warning) {
