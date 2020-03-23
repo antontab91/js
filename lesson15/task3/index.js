@@ -1,22 +1,22 @@
 export function createLogger() {
     let memory = [];
 
-    const warn = (warning) => {
+    function warn(warning) {
         return memory.push({ message: warning, dateTime: new Date(), type: 'warn', });
     }
 
-    const error = (err) => {
+    function error(err) {
         return memory.push({ message: err, dateTime: new Date(), type: 'error', });
     }
 
-    const log = (log) => {
+    function log(log) {
         return memory.push({ message: log, dateTime: new Date(), type: 'log', })
     }
 
-    const getRecords = (type) => {
+    function getRecords(type) {
         if (!type) {
             return memory
-        };
+        }
         return memory.filter((el) => el.type === type).sort((a, b) => a.dateTime - b.dateTime);
     }
     return {
