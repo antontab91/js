@@ -1,6 +1,6 @@
 export function defer(func, ms) {
-    return function (ms) {
-        setTimeout(() => func(...arguments).bind(this), ms);
+    return function () {
+        setTimeout(() => func(...arguments), ms);
 
     };
 }
