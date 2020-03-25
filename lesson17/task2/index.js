@@ -6,7 +6,7 @@ export const callbackPrompt = {
     },
 
     showDeferredPrompt(ms) {
-        setTimeout(this.showPrompt, ms);
+        setTimeout(this.showPrompt.bind(this), ms);
     }
 }
 
