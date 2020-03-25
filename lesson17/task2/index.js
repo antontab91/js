@@ -7,7 +7,9 @@ export const callbackPrompt = {
 
     showDeferredPrompt(ms) {
         setTimeout(this.showPrompt.bind(this), ms);
+        // this.showPrompt();
     }
 }
 
-callbackPrompt.showDeferredPrompt(4000);
+// callbackPrompt.showDeferredPrompt(4000);
+// callbackPrompt.showDeferredPrompt();
