@@ -1,4 +1,7 @@
 export function createArrayOfFunctions(num) {
+    if (!num) {
+        return [];
+    }
     if (typeof num !== 'number') {
         return null;
     }
