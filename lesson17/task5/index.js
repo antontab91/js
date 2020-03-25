@@ -1,9 +1,9 @@
 export const timer = {
     secondsPassed: 0,
     minsPassed: 0,
-    start: 0,
+    timerId: 0,
     startTimer() {
-        this.start = setTimeout(() => {
+        this.timerId = setTimeout(() => {
             this.secondsPassed = this.secondsPassed + 5;
             if (this.secondsPassed === 60) {
                 this.minsPassed = this.minsPassed + 1;
@@ -26,3 +26,4 @@ export const timer = {
         this.minsPassed = 0;
     }
 }
+
