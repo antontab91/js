@@ -5,10 +5,13 @@ export function defer(func, ms) {
     };
 }
 
-export function sayHi() {
-    console.log('Hi');
+const user = {
+    name: 'Tom',
+    sayHi() {
+        console.log(`Hi, I'am ${this.name}!`);
+    }
 }
 
-export const deferredSayHi = defer(sayHi, 1000);
+export const deferredSayHi = defer(user.sayHi.bind(user), 1000);
 
 deferredSayHi();    
