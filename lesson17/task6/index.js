@@ -1,4 +1,4 @@
-function bind(fn, context) {
+export function bind(fn, context) {
 
     let bindArgs = [].slice.call(arguments, 2);
     return function () {
