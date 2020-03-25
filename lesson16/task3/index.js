@@ -10,4 +10,5 @@ export function createArrayOfFunctions(num) {
         }
     }
     return arr;
+
 }
