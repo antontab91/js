@@ -11,4 +11,4 @@ export function sayHi() {
 
 export const deferredSayHi = defer(sayHi, 1000);
 
-deferredSayHi();
+deferredSayHi();    
