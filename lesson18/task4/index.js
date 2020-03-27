@@ -1,4 +1,4 @@
-function saveCalls(allCalls) {
+export function saveCalls(allCalls) {
 
     function withMemory() {
         withMemory.calls.push([...arguments]);
