@@ -11,5 +11,21 @@ export const callbackPrompt = {
     }
 }
 
-// callbackPrompt.showDeferredPrompt(4000);
-// callbackPrompt.showDeferredPrompt();
+callbackPrompt.showDeferredPrompt(4000);
+callbackPrompt.showDeferredPrompt();
+
+
+// export const callbackPrompt = {
+//     message: `write the message`,
+//     showPrompt() {
+//         let message = prompt(this.message);
+//         console.log(message);
+//     },
+//     showDeferredPrompt(sec) {
+//         setTimeout(setTimeout(() => {
+//             this.showPrompt()
+//         }, sec));
+//     }
+// }
+
+// callbackPrompt.showDeferredPrompt(5000);
