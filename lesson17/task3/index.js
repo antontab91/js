@@ -1,7 +1,7 @@
 export function defer(func, ms) {
     return function () {
 
-        setTimeout(() => func.apply(this, arguments), ms);
+        setTimeout(() => func.apply(user, arguments), ms);
 
     };
 }
@@ -15,4 +15,4 @@ const user = {
 
 export const deferredSayHi = defer(user.sayHi, 1000);
 
-deferredSayHi();    
+deferredSayHi("dssd");    
