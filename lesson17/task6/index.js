@@ -9,9 +9,17 @@
 //     };
 // };
 
-export function bind(fn, context) {
-    return function (...arguments) {
-        return fn.apply(context, [...arguments]);
+// export function bind(fn, context) {
+//     return function (...arg) {
+//         return fn.apply(context, [...arg]);
+//     };
+// }
+
+function bind(context, func, ...xz) {
+    console.log(...xz)
+    return function (...arg) {
+        console.log(...arg)
+        return func.apply(context, [...xz, ...arg]);
     };
 }
 
