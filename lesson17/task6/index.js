@@ -15,7 +15,7 @@
 //     };
 // }
 
-function bind(context, func, ...xz) {
+export function bind(context, func, ...xz) {
     console.log(...xz)
     return function (...arg) {
         console.log(...arg)
