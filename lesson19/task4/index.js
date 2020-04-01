@@ -12,7 +12,7 @@ User.prototype.requestNewPhoto = function () {
 }
 
 User.prototype.setAge = function (age) {
-    this.age = age;
+    // this.age = age;
     // switch (age) {
     //     case age < 0:
     //         return false;
