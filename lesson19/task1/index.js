@@ -4,7 +4,7 @@ export const vehicle = {
         console.log(`${this.name} is moving`);
     },
     stop() {
-        console.log(`${this.name} is stopped`);
+        console.log(`${this.name} stopped`);
     }
 };
 
