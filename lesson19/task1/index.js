@@ -32,4 +32,5 @@ export const ship = {
 Object.setPrototypeOf(ship, vehicle);
 
 
-console.log(ship.stopMachine())
+console.log(ship.stopMachine());
+

@@ -1,16 +1,9 @@
-export const user = {
-    firstName: 'Jonh',
-    lastName: 'Doe',
-    get fullName() {
-        return `${this.firstName} ${this.lastName}`
-    },
-
-    set fullName(value) {
-        return [this.firstName, this.lastName] = value.split(' ');
+export function getOwnProps(obj) {
+    for (let prop in obj) {
+        if ((typeof obj.hasOwnProperty(prop)) !== 'function') {
+            console.log(prop);
+        }
     }
-};
+}
 
 
-user.fullName = "Petushok Grebeshok";
-console.log(user.firstName);
-console.log(user.lastName);
