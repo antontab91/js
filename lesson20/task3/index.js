@@ -18,3 +18,4 @@ export class Wallet {
         return this._balance = this._balance - sum;
     }
 }
+
