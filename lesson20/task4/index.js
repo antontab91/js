@@ -11,9 +11,9 @@ export class Order {
 
     checkPrice() {
         if (this.price > 1000) {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     confirmOrder() {
