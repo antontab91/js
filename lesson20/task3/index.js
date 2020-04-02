@@ -7,7 +7,7 @@ export class Wallet {
         return this._balance;
     }
     deposit(sum) {
-        this._balance += sum;
+        this._balance = this._balance + sum;
     }
 
     withdraw(sum) {
@@ -15,7 +15,7 @@ export class Wallet {
             console.log(`No enough funds`);
             return;
         }
-        return this._balance -= sum;
+        return this._balance = this._balance - sum;
     }
 }
 
