@@ -15,6 +15,6 @@ export class Wallet {
             console.log(`No enough funds`);
             return;
         }
-        this._balance = this._balance + sum;
+        this._balance = this._balance - as sum;
     }
 }
