@@ -1,25 +1,31 @@
 export class Order {
     constructor(price, city, type) {
+        this.id = Math.random.toString();
         this.price = price;
-        this.city = city;
-        this.type = type;
-        this.id = (Math.random()).toString();
         this.dateCreated = new Date();
         this.isConfirmed = false;
         this.dateConfirmed = 0;
+        this.city = city;
+        this.type = type;
     }
 
     checkPrice() {
-        return this.price > 1000 ? true : false;
-    }
-    confirmOrder() {
-        if (!this.isConfirmed) {
-            this.isConfirmed = true;
+        if (this.price > 1000) {
+            return false;
         }
-        this.dateConfirmed = new Date();
+        return true;
+    }
 
+    confirmOrder() {
+        if (!this.isConfirmed) {                     // если статус не подтверждн ( а он по умолчанию не подтвержден )
+            this.isConfirmed = true;                            // подтверждаем 
+        }
+        this.dateConfirmed = new Date();                             //     выставляем новую дату
     }
     isValidType() {
-        return (this.type === 'Buy' || this.type === 'Sell') ? true : false
+        if (this.type === 'Buy' || this.type === 'Sell') {          // если тип равен бай или сел - єто хорошо , в простивном случае борода 
+            return true;
+        }
+        return false;
     }
 }
