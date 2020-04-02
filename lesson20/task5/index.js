@@ -4,33 +4,34 @@ export class User {
         this._name = name;
         this._sessionId = sessionId;
     }
-    get id() { // используем геттер только на чтение id пользователей
+    get id() {
         return this._id;
     }
-    get name() { // используем геттер только на чтение свойства имен пользователей
+    get name() {
         return this._name;
     }
-    get sessionId() { // используем геттер только на чтение свойства sessionId
+    get sessionId() {
         return this._sessionId;
     }
 }
 
 export class UserRepository {
     constructor(users) {
-        this._users = Object.freeze(users); // запрещаем изменения в массиве пользователей
+        this._users = Object.freeze(users);
     }
-    get users() { // используем геттер только чтение массива пользователей
+    get users() {
         return this._users;
     }
 
     getUserNames() {
-        return this._users.map((a) => a.name); //получаем массив имен пользователей
+        return this._users.map((a) => a.name);
     }
     getUserIds() {
-        return this._users.map((a) => a.id); //получаем массив id пользователей
+        return this._users.map((a) => a.id);
     }
     getUserNameById(id) {
-        for (let i of this._users) { //получаем имя пользователя по id
+        for (let i of this._users) {
+
             if (i.id === id)
                 return i.name;
         }
