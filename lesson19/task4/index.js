@@ -46,5 +46,5 @@ User.prototype.setAge = function (age) {
     if (age >= 25) { this.requestNewPhoto() }
     return age;
 };
-const user = new User('John', 26);
+const user = new User('Mokshan', 54);
 
