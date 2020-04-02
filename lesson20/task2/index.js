@@ -36,31 +36,30 @@
 
 export class Vehicle {
     constructor(name, numberOfWheels) {
-        this.name = name;
-        this.numberOfWheels = numberOfWheels;
+        name = this.name;
+        numberOfWheels = this.numberOfWheels;
     }
 
     move() {
-        console.log(`${this.name} is moving`);
+        console.log(`${this.name} is moving`)
     }
     stop() {
-        console.log(`${this.name} stopped`);
+        console.log(`${this.name} stopped`)
     }
 }
-export class Ship extends Vehicle {
+
+export class Ship extends Vehicle {                              // exteds - ключевое слово указівающее от кого наследоваться 
     constructor(name, maxSpeed) {
-        super(name, false);
+        super(name, false);                                       //тут мы с помощью super обратились(как будто візвали со своими значениеями) к  конструктору класса от которого наследовались и взяли из него name , а в numberOfWheels записали false  
         this.maxSpeed = maxSpeed;
     }
+
     move() {
-        super.move();
         console.log(`${this.name} lifting anchor up`);
+        super.move();                                               //тут мі візіваем метод , которій наследуется от радительского класса
     }
     stop() {
-        super.stop();
-        console.log(`${this.name} lifting anchor down`);
+        super.stop();                                               //тут мі візіваем метод , которій наследуется от радительского класса
+        console.log(`${this.name} lifting anchor down`)
     }
 }
-const ship = new Ship('Aurora', 17);
-console.log(ship);
-ship.stop();
