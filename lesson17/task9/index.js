@@ -1,26 +1,94 @@
-export function bind(fn, context) {
-
-    let bindArgs = [].slice.call(arguments, 2);
-    return function () {
-
-        let fnArgs = [].slice.call(arguments);
-
-        return fn.apply(context, bindArgs.concat(fnArgs));
-    };
+/* ===> 1 <=== */
+const student = {
+    name: 'Tom',
+};
+const student2 = {
+    name: 'Bruce',
 };
 
-// export function bind(fn, context) {
-//     return function (...arg) {
-//         return fn.apply(context, [...arg]);
-//     };
-// }
+function sayName() {
+    console.log(this.name);
+}
 
-// export function bind(context, func, ...xz) {
-//     console.log(...xz)
-//     return function (...arg) {
-//         console.log(...arg)
-//         return func.apply(context, [...xz, ...arg]);
-//     };
-// }
+/*
+ * создайте ф-цию sayStudentName которая будет выводить в консоль имя студента 'Tom'
+ * используйте .bind и ф-цию sayName
+ */
 
-// http://jsraccoon.ru/interview-bind  - в этой статье теория о том как написать эту функцию , которая мне помогла . 
+sayName.bind(student)();
+
+/*
+ * создайте ф-цию sayBruceName которая будет выводить в консоль имя 'Bruce'
+ * используйте ф-цию sayName и .bind с нужным объектом
+ */
+sayName.bind(student2)();
+
+/* ===> 2 <=== */
+const company = {
+    companyName: 'Microsoft'
+};
+
+function greeting(firstName, lastName) {
+    console.log(`Hello, ${firstName} ${lastName}. Welcome to the ${this.companyName}`);
+}
+
+/*
+ * создайте ф-цию specialGreeting которая будет выводить в консоль
+ * 'Hello, Bob Marley. Welcome to the Microsoft`
+ * используйте ф-цию greeting и .bind с нужным объектом и аргументами
+ * specialGreeting не должна принимать ни одного аргумента
+ */
+
+let specialGreeting = greeting.bind(company);
+specialGreeting('Bob', 'Marley');
+
+
+
+/* ===> 3 <=== */
+const country = {
+    countryName: 'Ukraine',
+    capital: 'Kyiv'
+};
+
+function getPopulation(population) {
+    console.log(`Population in ${this.countryName} is ${population}`);
+    return `Population in ${this.countryName} is ${population}`;
+}
+
+/*
+ * создайте ф-цию getUkrainePopulation которая будет возвращать строку
+ * 'Population in Ukraine is 43000`
+ * используйте ф-цию getPopulation и .bind с нужным объектом и аргументами
+ * getUkrainePopulation не должна принимать ни одного аргумента
+ */
+let getUkrainePopulation = getPopulation.bind(company, 43000);
+getUkrainePopulation();
+
+
+/* ===> 4 <=== */
+const transaction = {
+    amount: 1200,
+    operation: 'sell',
+    currency: 'USD',
+    exchange: 'NYSE',
+    printTransaction() {
+        console.log(`${this.amount} ${this.currency} - ${this.operation} on ${this.exchange}`);
+    }
+}
+
+const anotherTransaction = {
+    amount: 400,
+    operation: 'buy',
+    currency: 'USD',
+    exchange: 'NASDAQ',
+};
+
+/*
+ * создайте ф-цию printSpecialTransaction которая будет выводить в консоль
+ * '400 USD - buy on NASDAQ`
+ * используйте метод transaction.printTransaction и .bind с нужным объектом
+ * printSpecialTransaction не должна принимать ни одного аргумента
+ */
+
+let printSpecialTransaction = transaction.printTransaction.bind(anotherTransaction);
+printSpecialTransaction();
