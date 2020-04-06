@@ -14,14 +14,14 @@ function sayName() {
  * создайте ф-цию sayStudentName которая будет выводить в консоль имя студента 'Tom'
  * используйте .bind и ф-цию sayName
  */
-sayName.bind(student)();
+export const sayStudentName = sayName.bind(student)();
 
 /*
  * создайте ф-цию sayBruceName которая будет выводить в консоль имя 'Bruce'
  * используйте ф-цию sayName и .bind с нужным объектом
  */
 
-sayName.bind(student2)();
+export const sayBruceName = sayName.bind(student2)();
 
 /* ===> 2 <=== */
 const company = {
