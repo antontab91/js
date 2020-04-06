@@ -9,7 +9,9 @@ export function finishForm() {
 
     let form = document.querySelector('.login-form');
     let inputName = document.createElement('input');
-    inputName.setAttribute('name', 'login')
+    inputName.setAttribute('type', 'text');
+    inputName.setAttribute('name', 'login');
+
     form.prepend(inputName);
 }
 // finishForm();
