@@ -1,32 +1,65 @@
-const tasks = [
-    { text: 'Buy milk', done: false },
-    { text: 'Pick up Tom from airport', done: false },
-    { text: 'Visit party', done: false },
-    { text: 'Visit doctor', done: true },
-    { text: 'Buy meat', done: true },
-];
+const elemDiv = document.querySelector('.rect_div');
+const elemP = document.querySelector('.rect_p');
+const elemSpan = document.querySelector('.rect_span');
 
-const renderListItems = listItems => {
-    const listElem = document.querySelector('.list');
+const btnClear = document.querySelector('.btn-clear');
+const btnRemoveHandleds = document.querySelector('.btn-remove');
+const btnAttatchHandleds = document.querySelector('.btn-attach');
 
-    const listItemsElems = listItems
-        .sort((a, b) => a.done - b.done)
-        .map(({ text, done }) => {
-            const listItemElem = document.createElement('li');
-            listItemElem.classList.add('list__item');
-            if (done) {
-                listItemElem.classList.add('list__item_done');
-            }
-            const checkboxElem = document.createElement('input');
-            checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.checked = done;
-            checkboxElem.classList.add('list__item-checkbox');
 
-            listItemElem.append(checkboxElem, text);
+function logTarget(text, color) {
+    const eventListElem = document.querySelector('.events-list');
 
-            return listItemElem;
-        });
-    listElem.append(...listItemsElems);
-};
+    eventListElem.innerHTML += `<span style="color: ${color}; margin-left: 8px;">${text}</span>`;
+}
 
-renderListItems(tasks);
+function clearLog() {
+    const eventListElem = document.querySelector('.events-list');
+
+    eventListElem.innerHTML = '';
+}
+
+function removeHandleds() {
+    elemDiv.removeEventListener('click', logGreyDiv, true);
+    elemP.removeEventListener('click', logGreyP, true);
+    elemSpan.removeEventListener('click', logGreySpan, true);
+
+    elemDiv.removeEventListener('click', logGreenDiv);
+    elemP.removeEventListener('click', logGreenP);
+    elemSpan.removeEventListener('click', logGreenSpan);
+}
+
+function attatchHandleds() {
+    elemDiv.addEventListener('click', logGreyDiv, true);
+    elemP.addEventListener('click', logGreyP, false);
+    elemSpan.addEventListener('click', logGreySpan, true);
+
+
+    elemDiv.addEventListener('click', logGreenDiv);
+    elemP.addEventListener('click', logGreenP);
+    elemSpan.addEventListener('click', logGreenSpan);
+}
+
+
+const logGreenDiv = logTarget.bind(null, 'DIV', 'green');
+const logGreenP = logTarget.bind(null, 'P', 'green');
+const logGreenSpan = logTarget.bind(null, 'SPAN', 'green');
+
+const logGreyDiv = logTarget.bind(null, 'DIV', 'grey');
+const logGreyP = logTarget.bind(null, 'P', 'grey');
+const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
+
+
+
+elemDiv.addEventListener('click', logGreyDiv, true);
+elemP.addEventListener('click', logGreyP, true);
+elemSpan.addEventListener('click', logGreySpan, true);
+
+
+elemDiv.addEventListener('click', logGreenDiv);
+elemP.addEventListener('click', logGreenP);
+elemSpan.addEventListener('click', logGreenSpan);
+
+btnClear.addEventListener('click', clearLog);
+btnRemoveHandleds.addEventListener('click', removeHandleds);
+btnAttatchHandleds.addEventListener('click', attatchHandleds);
