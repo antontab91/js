@@ -1,5 +1,3 @@
-let inputIn = document.querySelector('.text-input');
-function getInput(event) {
+document.querySelector('.text-input').addEventListener('change', function (event) {
     console.log(event.target.value);
-}
-inputIn.addEventListener('change', getInput);
+});
