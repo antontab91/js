@@ -1,12 +1,10 @@
-const page = document.querySelector('.pagination');
-const pageItem = document.querySelectorAll('.pagination__page');
-
+let arr = [...document.querySelectorAll('.pagination__page')];
+console.log(arr);
 
 function handleClick(event) {
-
     console.log(event.target.dataset.pageNumber);
 }
 
-pageItem.forEach(elem => {
+arr.forEach(function (elem) {
     elem.addEventListener('click', handleClick);
 });
