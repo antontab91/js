@@ -5,15 +5,23 @@ const tasks = [
     { text: 'Visit doctor', done: true },
     { text: 'Buy meat', done: true },
 ];
+const getListItems = listItems => {
+    const listElem = document.querySelector('.list');
+    const listItemElems = listItems.sort((a, b) => a.done - b.done)
+        .map(({ text, done }) => {
+            const listItemElem = document.createElement('li');
+            listItemElem.classList.add('list__item');
+            if (done) {
+                listItemElem.classList.add('list__item_done');
+            }
+            const checkboxElem = document.createElement('input');
+            checkboxElem.setAttribute('type', 'checkbox');
+            checkboxElem.checked = done;
+            checkboxElem.classList.add('list__item-checkbox');
+            listItemElem.append(checkboxElem, text);
+            return listItemElem;
 
-// let ulList = document.querySelector('.list');
-// let listItem = document.createElement('li');
-// let listItemCheckbox = document.createElement('input');
-
-
-// listItem.className = 'list__item';
-// listItemCheckbox.setAttribute('type', 'checkbox');
-// listItemCheckbox.className = 'list__item-checkbox';
-
-// ulList.append(listItem);
-// listItem.append(listItemCheckbox);
+        });
+    listElem.append(...listItemElems);
+};
+getListItems(tasks);

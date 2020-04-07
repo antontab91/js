@@ -11,5 +11,5 @@ export function getSection(num) {
 
 }
 
-getSection()
+// getSection()
 
