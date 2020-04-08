@@ -1,8 +1,8 @@
-let arr = [...document.querySelectorAll('.number')];
-// console.log(arr);
-export function squaredNumbers(arr) {
+export function squaredNumbers() {
+    let arr = [...document.querySelectorAll('.number')];
     arr.forEach(function (el) {
         let attrValue = el.getAttribute('data-number');
+        // console.log(arr);
         // console.log(attrValue)
         // console.log(typeof attrValue)
         // console.log(Math.pow(attrValue, 2));
@@ -10,4 +10,9 @@ export function squaredNumbers(arr) {
     });
 }
 
-// squaredNumbers(arr)
+
+// export const squaredNumbers = () => Array
+//     .from(document.querySelectorAll('.number'))
+//     .forEach(elem => elem.setAttribute('data-squared-number', Math.pow(elem.dataset.number, 2)));
+
+// squaredNumbers()
