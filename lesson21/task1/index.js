@@ -9,7 +9,7 @@ const tasks = [
 const list = document.querySelector('.list');
 let sortArr = [];
 
-function sortTasks(arr) {
+function sortTasks(arr) {                                      // отсортировал те дела , что не готовы - вверху , те что готовы внизу .
     sortArr = arr.sort(function (a, b) {
         return a.done - b.done;
     });
@@ -17,18 +17,18 @@ function sortTasks(arr) {
 }
 
 function getListItems(arr) {
-    return arr.map(function (elem) {
-        let listItem = document.createElement('li');
-        let checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.classList.add('list__item-checkbox')
-        listItem.classList.add('list__item')
-        if (elem.done) {
-            listItem.className = 'list__item list__item_done';
-            checkbox.checked = true;
+    return arr.map(function (elem) {                                               // прошелся по полученному массиву 
+        let listItem = document.createElement('li');                                // обьявил переменную листайтема             
+        let checkbox = document.createElement('input');                             // обьявил переменную чекбокса 
+        checkbox.type = 'checkbox';                                                  // тип инпута чекбокс 
+        checkbox.classList.add('list__item-checkbox')                                 //     добавил класс 
+        listItem.classList.add('list__item')                                            // добавил класс 
+        if (elem.done) {                                                                // если свойство дан обьекта - тру 
+            listItem.className = 'list__item list__item_done';                          // значит устанавливаю класс 
+            checkbox.checked = true;                                                     // и чекбокс чекнутый            
         }
-        listItem.append(checkbox, elem.text);
-        list.append(listItem);
+        listItem.append(checkbox, elem.text);                                            // вставляю чекбокс и текст в листайтем 
+        list.append(listItem);                                                            // вставляю листайтем 
         console.log('2');
     });
 }
