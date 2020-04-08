@@ -21,8 +21,8 @@ function getListItems(arr) {
         let listItem = document.createElement('li');                                // обьявил переменную листайтема             
         let checkbox = document.createElement('input');                             // обьявил переменную чекбокса 
         checkbox.type = 'checkbox';                                                  // тип инпута чекбокс 
-        checkbox.classList.add('list__item-checkbox')                                 //     добавил класс 
-        listItem.classList.add('list__item')                                            // добавил класс 
+        checkbox.classList.add('list__item-checkbox');                                //     добавил класс 
+        listItem.classList.add('list__item');                                           // добавил класс 
         if (elem.done) {                                                                // если свойство дан обьекта - тру 
             listItem.className = 'list__item list__item_done';                          // значит устанавливаю класс 
             checkbox.checked = true;                                                     // и чекбокс чекнутый            
