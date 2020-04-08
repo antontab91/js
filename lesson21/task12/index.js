@@ -1,6 +1,6 @@
 let arr = [...document.querySelectorAll('.number')];
 console.log(arr);
-function squaredNumbers(arr) {
+export function squaredNumbers(arr) {
     arr.forEach(function (el) {
         let attrValue = el.getAttribute('data-number');
         // console.log(attrValue)
