@@ -22,7 +22,7 @@ export function getSection(num) {
     let bubu = '';
     arr.forEach(function (elem) {
         if (elem.dataset.number == num) {
-            bubu = elem.closest('div').dataset.section
+            bubu = elem.closest('div').dataset.section;
         }
     });
     return bubu;
