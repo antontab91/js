@@ -12,13 +12,19 @@
 export function getSection(num) {
     let arr = [...document.querySelectorAll('span')];
 
-    let newArr = arr.reduce(function (acc, elem) {
+    // let newArr = arr.reduce(function (acc, elem) {
+    //     if (elem.dataset.number == num) {
+    //         acc = elem.closest('div').dataset.section;
+    //     }
+    //     return acc;
+    // });
+    // return newArr
+    let bubu = '';
+    arr.forEach(function (elem) {
         if (elem.dataset.number == num) {
-            acc = elem.closest('div').dataset.section;
+            bubu = elem.closest('div').dataset.section
         }
-        return acc;
     });
-    return newArr
-
+    return bubu;
 }
-// console.log(getSection(3))
+console.log(getSection(3))
