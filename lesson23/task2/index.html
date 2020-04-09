@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-    <title>DOM elements</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 
-<body>
-    <h1 class="title">Front-End tech stack</h1>
-    <input type="text" value="Hello" />
-
-    <script src="index.js" type="module"></script>
+<body class="page">
+    <div class="arena"></div>
+    <div class="board">
+        <span>Selected seat</span>
+        <span class="board__selected-seat">-</span>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
