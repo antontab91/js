@@ -27,7 +27,7 @@ const onPasswordChange = event => {
     passwordErrorElem.textContent = errorText;
 }
 
-emailInputElem.addEventListener('input', onEmailChange);
+// emailInputElem.addEventListener('input', onEmailChange);
 // passwordInputElem.addEventListener('input', onPasswordChange);
 
 const formElem = document.querySelector('.login-form');
