@@ -1,18 +1,29 @@
-const divElem = document.querySelector('.rect_div');
-const pElem = document.querySelector('.rect_p');
-const spanElem = document.querySelector('.rect_span');
-const eventsListElem = document.querySelector('.events-list');
+const rectDiv = document.querySelector('.rect_div');
+const rectP = document.querySelector('.rect_p');
+const rectSpan = document.querySelector('.rect_span');
+const eventsList = document.querySelector('.events-list');
+const clearBtn = document.querySelector('.clear-btn')
+const removeHandlersBtn = document.querySelector('.remove-handlers-btn')
+const attachHandlersBtn = document.querySelector('.attach-handlers-btn')
 
-const clearBtn = document.querySelector('.clear-btn');
-const attachBtn = document.querySelector('.attach-handlers-btn');
-const removeBtn = document.querySelector('.remove-handlers-btn');
+
+console.log(rectDiv);
+console.log(rectP);
+console.log(rectSpan);
+console.log(eventsList);
+console.log(clearBtn);
+console.log(removeHandlersBtn);
+console.log(attachHandlersBtn);
 
 
-const logTarget = (text, color) => {
-    // const eventsListElem = document.querySelector('.event-list');
+function logTarget(text, color) {
+    // const mySpan = document.createElement('span');
+    // mySpan.setAttribute('style', `color:${color}; margin-left:8px`);
+    // mySpan.innerText = text;
+    // eventsList.append(mySpan);
 
-    eventsListElem.innerHTML += `<span style="color: ${color}; margin-left: 8px;">${text}</span>`;
-};
+    eventsList.innerHTML += `<span style="color: ${color}; margin-left:8px;">${text}</span>`;
+}
 
 const logGreenDiv = logTarget.bind(null, 'DIV', 'green');
 const logGreenP = logTarget.bind(null, 'P', 'green');
@@ -22,37 +33,40 @@ const logGreyDiv = logTarget.bind(null, 'DIV', 'grey');
 const logGreyP = logTarget.bind(null, 'P', 'grey');
 const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
 
+rectDiv.addEventListener('click', logGreyDiv, true);  // погружение 
+rectP.addEventListener('click', logGreyP, true);
+rectSpan.addEventListener('click', logGreySpan, true);
 
-function attacher() {
-    divElem.addEventListener('click', logGreyDiv, true);
-    divElem.addEventListener('click', logGreenDiv);
+rectDiv.addEventListener('click', logGreenDiv);
+rectP.addEventListener('click', logGreenP);
+rectSpan.addEventListener('click', logGreenSpan);
 
-    pElem.addEventListener('click', logGreyP, true);
-    pElem.addEventListener('click', logGreenP);
 
-    spanElem.addEventListener('click', logGreySpan, true);
-    spanElem.addEventListener('click', logGreenSpan);
+const getClickBtn = () => {
+    eventsList.innerHTML = ''; //очищет содержимое класса .events-list
 };
 
-const remover = () => {
-    divElem.removeEventListener('click', logGreyDiv, true);
-    divElem.removeEventListener('click', logGreenDiv);
+const getRemove = () => {
+    rectDiv.removeEventListener('click', logGreyDiv, true);  // удаляет обработчик события зарегистрированного ранее с помощью addEventListener(
+    rectP.removeEventListener('click', logGreyP, true);
+    rectSpan.removeEventListener('click', logGreySpan, true);
 
-    pElem.removeEventListener('click', logGreyP, true);
-    pElem.removeEventListener('click', logGreenP);
+    rectDiv.removeEventListener('click', logGreenDiv);
+    rectP.removeEventListener('click', logGreenP);
+    rectSpan.removeEventListener('click', logGreenSpan);
+};
+const getAttach = () => {
+    rectDiv.addEventListener('click', logGreyDiv, true);  // опять добавляет 
+    rectP.addEventListener('click', logGreyP, true);
+    rectSpan.addEventListener('click', logGreySpan, true);
 
-    spanElem.removeEventListener('click', logGreySpan, true);
-    spanElem.removeEventListener('click', logGreenSpan);
+    rectDiv.addEventListener('click', logGreenDiv);
+    rectP.addEventListener('click', logGreenP);
+    rectSpan.addEventListener('click', logGreenSpan);
 };
 
-const clearArea = () => {
-    eventsListElem.innerHTML = '';
-};
+clearBtn.addEventListener('click', getClickBtn);
+removeHandlersBtn.addEventListener('click', getRemove);
+attachHandlersBtn.addEventListener('click', getAttach);
 
-clearBtn.addEventListener('click', clearArea);
 
-attachBtn.addEventListener('click', attacher);
-
-removeBtn.addEventListener('click', remover);
-
-attacher();
