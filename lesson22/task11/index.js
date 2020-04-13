@@ -1,24 +1,46 @@
-const btnCreate = document.querySelector('.create-task-btn');
-const taskInput = document.querySelector('.task-input');
-btnCreate.addEventListener('click', createTask);
+const tasks = [];
 
-function createTask() {
+
+
+
+
+function createTask(arr) {
+
+    let list = document.querySelector('.list');
+    let newArr = arr.sort(function (a, b) {
+        return a.done - b.done;
+    }).map(function (elem) {
+        let listItem = document.createElement('li');
+        let checkbox = document.createElement('input');
+        listItem.classList.add('list__item');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.classList.add('list__item-checkbox');
+
+        if (elem.done) {
+            listItem.classList.add('list__item_done');
+            checkbox.checked = true;
+        }
+
+        listItem.append(checkbox, elem.text);
+
+        return listItem;
+    });
+
+    list.append(...newArr);
+
+
+}
+const btnCreate = document.querySelector('.create-task-btn');
+function MyClick() {
+    let taskInput = document.querySelector('.task-input');
     if (taskInput.value === '') {
         return;
     }
-
-    const list = document.querySelector('.list');
-    const listItem = document.createElement('span');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.classList.add('list__item-checkbox')
-    listItem.append(checkbox, taskInput.value);
-    listItem.classList.add('list__item')
-    list.append(listItem);
+    console.log(taskInput.value);
+    tasks.push({ text: taskInput.value, done: false });
+    console.log(tasks);
+    createTask(tasks);
     taskInput.value = '';
-
-
-    const arr = [...document.querySelectorAll('.list__item')];
-    console.log(arr);
 }
 
+btnCreate.addEventListener('click', MyClick);
