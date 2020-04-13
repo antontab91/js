@@ -22,7 +22,7 @@ function createNewTask() {
 const task = document.querySelector('.task-input');
 const createTaskButton = document.querySelector('.create-task-btn');
 createTaskButton.addEventListener('click', createNewTask);
-// const listElem = document.querySelector('.list');
+const listElem = document.querySelector('.list');
 
 function renderListItems(allTask) {
     listElem.innerHTML = '';
