@@ -59,4 +59,4 @@ function getChecked(event) {
     renderListItems(tasks);
 };
 
-renderListItems(tasks);
+// renderListItems(tasks);
