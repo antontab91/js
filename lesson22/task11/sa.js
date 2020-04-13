@@ -30,7 +30,7 @@ function getListItems(arr) {
         }
         listItem.append(checkbox, elem.text);                                            // вставляю чекбокс и текст в листайтем 
         list.append(listItem);                                                            // вставляю листайтем 
-        listItems.push(listItem)
+
     });
 }
 
