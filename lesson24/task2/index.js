@@ -1,14 +1,9 @@
-export function getTitleElement() {
-    let title = document.querySelector('.title');
-    console.dir(title);
-    return title;
-}
 
-export function getInputElement() {
-    let input = document.querySelector('input[type="text"]');
-    console.dir(input);
-    return input;
-}
+const formatter = new Intl.DateTimeFormat('en', {
+    timeZone: 'GMT',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+});
 
-getTitleElement();
-getInputElement()
+export const getGreenwichTime = date => formatter.format(date);
