@@ -100,6 +100,25 @@ function onPasswordChange(event) {
 emailInputElement.addEventListener('input', onEmailChange);   // на каждое изминение в импуте , я запускаю функцию , которая принимает значение обьекта ивента(event.target.value)
 passwordInputElement.addEventListener('input', onPasswordChange);
 
+const formElem = document.querySelector('.login-form');
+
+const onFormSubmit = event => {
+    event.preventDefault();          // отменяем дефолтное поведение в браузере , в данном случае дефолтній сабмит браузера 
+
+    // console.log([...new FormData(formElem)]);
+    const formData = [...new FormData(formElem)]
+        .reduce(function (acc, [field, value]) {
+            return { ...acc, [field]: value };
+        }, {});
+
+    console.log(formData);
+    alert(JSON.stringify(formData));
+
+
+}
+
+formElem.addEventListener('submit', onFormSubmit);     // обработчик сабмита
+
 
 
 

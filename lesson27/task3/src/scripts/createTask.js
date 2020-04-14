@@ -13,6 +13,9 @@ export function createNewTask() {
         dateCreate: new Date(),
         done: false,
     });
+
+
+
     task.value = '';
     setItem('tasksList', tasksList);
     listElem.innerHTML = '';
