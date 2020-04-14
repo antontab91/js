@@ -1,6 +1,13 @@
 const btnCreate = document.querySelector('.create-task-btn');
 let taskInput = document.querySelector('.task-input');
-const tasks = [];
+
+const tasks = [
+    { text: "as", done: false },
+    { text: "dsaasd", done: false },
+    { text: "asd", done: true },
+    { text: "sad", done: false }
+];
+
 
 
 function renderListItems(arr) {
@@ -23,14 +30,21 @@ function renderListItems(arr) {
     });
 }
 
-function MyClick() {
+renderListItems(tasks)
+
+function createElem() {
     if (taskInput.value === '') {
         return;
     }
     tasks.push({ text: taskInput.value, done: false });
     console.log(tasks);
     renderListItems(tasks);
+    console.log(tasks);
     taskInput.value = '';
 }
 
-btnCreate.addEventListener('click', MyClick);
+btnCreate.addEventListener('click', createElem);
+
+
+
+
