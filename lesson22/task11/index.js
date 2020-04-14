@@ -1,6 +1,6 @@
 const btnCreate = document.querySelector('.create-task-btn');
 let taskInput = document.querySelector('.task-input');
-
+const listElem = document.querySelector('.list');
 const tasks = [
     { text: "as", done: false },
     { text: "dsaasd", done: false },
@@ -11,7 +11,7 @@ const tasks = [
 
 
 function renderListItems(arr) {
-    const listElem = document.querySelector('.list');
+
     listElem.innerHTML = '';
     return arr.sort(function (a, b) {
         return a.done - b.done;
@@ -27,10 +27,12 @@ function renderListItems(arr) {
         }
         listItem.append(checkbox, elem.text);
         listElem.append(listItem);
+
+
     });
 }
 
-renderListItems(tasks)
+renderListItems(tasks);
 
 function createElem() {
     if (taskInput.value === '') {
@@ -39,12 +41,23 @@ function createElem() {
     tasks.push({ text: taskInput.value, done: false });
     console.log(tasks);
     renderListItems(tasks);
-    console.log(tasks);
+    // console.log(tasks);
     taskInput.value = '';
 }
 
 btnCreate.addEventListener('click', createElem);
 
 
+function confirmChecked(event) {
+    return tasks.find(function (elem) {
+        if (elem.text === event.target.parentNode.textContent) {
+            elem.done = event.target.checked;
+            console.log(tasks);
+            renderListItems(tasks);
+        }
+    });
+}
 
 
+listElem.addEventListener('click', confirmChecked);
+// confirmChecked();
