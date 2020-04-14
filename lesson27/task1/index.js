@@ -1,27 +1,15 @@
-const tasks = [
-    { text: 'Buy milk', done: false },
-    { text: 'Pick up Tom from airport', done: false },
-    { text: 'Visit party', done: false },
-    { text: 'Visit doctor', done: true },
-    { text: 'Buy meat', done: true },
-];
-const getListItems = listItems => {
-    const listElem = document.querySelector('.list');
-    const listItemElems = listItems.sort((a, b) => a.done - b.done)
-        .map(({ text, done }) => {
-            const listItemElem = document.createElement('li');
-            listItemElem.classList.add('list__item');
-            if (done) {
-                listItemElem.classList.add('list__item_done');
+export const getLocalStorageData = () => {
+    return Object.entries(localStorage)
+        .reduce((acc, [key, value]) => {
+            let newValue;
+            try {
+                newValue = JSON.parse(value);
+            } catch (e) {
+                newValue = value;
             }
-            const checkboxElem = document.createElement('input');
-            checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.checked = done;
-            checkboxElem.classList.add('list__item-checkbox');
-            listItemElem.append(checkboxElem, text);
-            return listItemElem;
-
-        });
-    listElem.append(...listItemElems);
-};
-getListItems(tasks);
+            return {
+                ...acc,
+                [key]: newValue
+            }
+        }, {});
+}
