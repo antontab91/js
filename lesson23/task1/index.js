@@ -108,7 +108,7 @@ const onFormSubmit = event => {
     // console.log([...new FormData(formElem)]);
     const formData = [...new FormData(formElem)]      //  данные из формы преобразовываем в массив 
         .reduce(function (acc, [field, value]) {        // проходимся по массиву и складываем в акамулятор данные из инпутов 
-            return { ...acc, [field]: value };
+            return { ...acc, [field]: value };              // если не понятна такая запись в самом верху есть закоменченное обяснение 
         }, {});
 
     console.log(formData);
