@@ -106,13 +106,13 @@ const onFormSubmit = event => {
     event.preventDefault();          // отменяем дефолтное поведение в браузере , в данном случае дефолтній сабмит браузера 
 
     // console.log([...new FormData(formElem)]);
-    const formData = [...new FormData(formElem)]
-        .reduce(function (acc, [field, value]) {
+    const formData = [...new FormData(formElem)]      //  данные из формы преобразовываем в массив 
+        .reduce(function (acc, [field, value]) {        // проходимся по массиву и складываем в акамулятор данные из инпутов 
             return { ...acc, [field]: value };
         }, {});
 
     console.log(formData);
-    alert(JSON.stringify(formData));
+    alert(JSON.stringify(formData));               // преобразовываем данные в строку с помощь джейсон стрингифай и выводим алертом строку 
 
 
 }
