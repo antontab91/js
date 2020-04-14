@@ -1,6 +1,7 @@
 const btnCreate = document.querySelector('.create-task-btn');
 let taskInput = document.querySelector('.task-input');
 const listElem = document.querySelector('.list');
+
 const tasks = [
     { text: "as", done: false },
     { text: "dsaasd", done: false },
@@ -27,8 +28,6 @@ function renderListItems(arr) {
         }
         listItem.append(checkbox, elem.text);
         listElem.append(listItem);
-
-
     });
 }
 
@@ -60,4 +59,3 @@ function confirmChecked(event) {
 
 
 listElem.addEventListener('click', confirmChecked);
-// confirmChecked();
