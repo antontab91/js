@@ -3,10 +3,10 @@ let taskInput = document.querySelector('.task-input');
 const listElem = document.querySelector('.list');
 
 const tasks = [
-    { text: "as", done: false },
-    { text: "dsaasd", done: false },
-    { text: "asd", done: true },
-    { text: "sad", done: false }
+    // { text: "as", done: false },
+    // { text: "dsaasd", done: false },
+    // { text: "asd", done: true },
+    // { text: "sad", done: false }
 ];
 
 
