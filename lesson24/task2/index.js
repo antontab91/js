@@ -1,4 +1,3 @@
-
 const formatter = new Intl.DateTimeFormat('en', {
     timeZone: 'GMT',
     hour: '2-digit',
