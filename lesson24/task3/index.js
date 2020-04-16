@@ -20,8 +20,8 @@ export function getDiff(startDate, endDate) {
     // return Math.floor((Date.parse(startDate) - Date.parse(endDate)) / 86400000)
 
     console.log(diff);
-    if (startDate > endDate) {
-        let diff = new Date(endDate) - new Date(startDate);
+    if (startDate < endDate) {
+        diff = new Date(endDate) - new Date(startDate);
     }
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));      //СУКА БЛЯТЬ ! 1000*60*60*24  1000 миллисекунд в секунде , 60секунд в минуте , 60минут в часе , 24 часа в сутках 
     const hovers = Math.floor(diff / (1000 * 60 * 60) % 24);       //
@@ -36,4 +36,4 @@ export function getDiff(startDate, endDate) {
 
 }
 
-console.log(getDiff('1997-06-17 06:22:58', '1995-07-13 09:00:00')); 
+console.log(getDiff('1991-06-17 06:22:58', '1995-07-13 09:00:00')); 
