@@ -8,7 +8,7 @@ const studentsArr = [
 ];
 const mouthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
-function studentsBirthDays(studentsArr) {
+export function studentsBirthDays(studentsArr) {
     const returnObj = {};
     const newArr = studentsArr.slice().sort((a, b) => {
         new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate();
