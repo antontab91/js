@@ -1,14 +1,14 @@
-const studentsArr = [
-    { name: 'Tom', birthDate: '01/15/2010' },
-    { name: 'Ben', birthDate: '01/17/2008' },
-    { name: 'Sam', birthDate: '03/15/2010' },
-    { name: 'Bob', birthDate: '05/31/2008' },
-    { name: 'Gram', birthDate: '01/11/2003' },
-    { name: 'Alex', birthDate: '05/15/2010' }
-];
-const mouthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+// const studentsArr = [
+//     { name: 'Tom', birthDate: '01/15/2010' },
+//     { name: 'Ben', birthDate: '01/17/2008' },
+//     { name: 'Sam', birthDate: '03/15/2010' },
+//     { name: 'Bob', birthDate: '05/31/2008' },
+//     { name: 'Gram', birthDate: '01/11/2003' },
+//     { name: 'Alex', birthDate: '05/15/2010' }
+// ];
 
 export function studentsBirthDays(studentsArr) {
+    const mouthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     const returnObj = {};
     const newArr = studentsArr.slice().sort((a, b) => {
         new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate();
