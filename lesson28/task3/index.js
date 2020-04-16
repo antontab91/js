@@ -1,15 +1,7 @@
-export function getItemsList() {
-    let allElementsWhisClassTechnology = document.querySelectorAll('.technology');
-    console.dir(allElementsWhisClassTechnology);
-    return allElementsWhisClassTechnology;
-}
 
-export function getItemsArray() {
-    let allElementsWhisClassTool = document.querySelectorAll('.tool');
-    let arr = [...allElementsWhisClassTool];
-    console.log(arr);
-    console.dir(arr);
-    return arr;
-}
-getItemsList();
-getItemsArray();
+const mult = a => b => a * b;
+const twice = mult(2);
+const triple = mult(3);
+console.log(twice(5));
+console.log(triple(5));
+export { mult, twice, triple };

@@ -1,59 +1,9 @@
-// export function getTitle() {
-//     let titleText = document.querySelector('.title').textContent;
-//     console.dir(titleText);
-//     console.log(titleText);
-//     return titleText;
-// }
+const add2 = value => value + 2;
+const square = value => value * value;
+const half = value => value / 2;
 
-
-
-// export function getDescription() {
-//     let aboutText = document.querySelector('.about').innerText;
-//     console.dir(aboutText);
-//     console.log(aboutText);
-//     return aboutText;
-// }
-
-
-
-// export function getPlans() {
-//     let plansText = document.querySelector('.plans').innerHTML;
-//     console.dir(plansText);
-//     console.log(plansText);
-//     return plansText;
-// }
-
-
-
-// export function getGoal() {
-//     let goalText = document.querySelector('.goal').outerHTML;
-//     console.dir(goalText);
-//     console.log(goalText);
-//     return goalText;
-// }
-
-
-
-// getTitle();
-// getDescription();
-// getPlans();
-// getGoal();
-
-
-
-
-export function getTitle() {
-    return document.querySelector('.title').textContent;
-};
-
-export function getDescription() {
-    return document.querySelector('.about').innerText;
-};
-
-export function getPlans() {
-    return document.querySelector('.plans').innerHTML;
+export const compose = (...funcs) => value => {
+    return funcs.reduce((acc, func) => func(acc), value);
 }
 
-export function getGoal() {
-    return document.querySelector('.goal').outerHTML;
-};
+const superFunc = compose(add2, square, half);
