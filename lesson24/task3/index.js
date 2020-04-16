@@ -30,7 +30,7 @@ export function getDiff(startDate, endDate) {
     console.log(minutes);
     console.log(seconds);
 
-    return `${days}d ${hovers}h ${minutes}m ${seconds}s`
+    return `${-days}d ${-hovers}h ${-minutes}m ${-seconds}s`
 
 }
 
