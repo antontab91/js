@@ -27,8 +27,8 @@ export function studentsBirthDays(studentsArr) {
 
 }
 
-console.log(studentsBirthDays(studentsArr));
-studentsBirthDays(studentsArr)
+// console.log(studentsBirthDays(studentsArr));
+// studentsBirthDays(studentsArr)
 
 // function studentsBirthDays(studentsArr) {
 //     const sortStudentsArr = studentsArr.slice().sort(function (a, b) {
