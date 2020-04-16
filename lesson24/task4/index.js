@@ -8,6 +8,10 @@ const studentsArr = [
 ];
 const mouthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
+
+// сначала отсоровал по дате 
+// прошелся мепом по отсортированному массиву из обьектов 
+
 function studentsBirthDays(studentsArr) {
     const returnObj = {};
     const newArr = studentsArr.slice().sort((a, b) => {
@@ -15,12 +19,12 @@ function studentsBirthDays(studentsArr) {
     });
     newArr.map((elem) => {
         console.log(new Date(elem.birthDate).getMonth());
-        const elemCount = new Date(elem.birthDate).getMonth();
+        const elemCount = new Date(elem.birthDate).getMonth();      // тут мі вернули числа от 1 до 12 месяцев , вернули номер месяца из дня рождения  
         // console.log(returnObj[mouthArr(elemCount)])
-        if (returnObj[mouthArr[elemCount]] === undefined) {
-            returnObj[mouthArr[elemCount]] = [];
+        if (returnObj[mouthArr[elemCount]] === undefined) {        // если свойства с именем  такого месяца еще нету 
+            returnObj[mouthArr[elemCount]] = [];                    // идем дальше 
         }
-        returnObj[mouthArr[elemCount]].push(elem.name)
+        returnObj[mouthArr[elemCount]].push(elem.name)                  // если есть - пушим в него имя чувака
 
     });
     return returnObj;
