@@ -20,7 +20,7 @@ export function getDiff(startDate, endDate) {
     // return Math.floor((Date.parse(startDate) - Date.parse(endDate)) / 86400000)
 
     console.log(diff);
-    if (startDate < endDate) {
+    if (startDate < endDate) {                             // я не с той стороні думал 1991 - дата меньше чем 1995 , когда будешь читать ВСПОМНИ !  
         diff = new Date(endDate) - new Date(startDate);
     }
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));      //СУКА БЛЯТЬ ! 1000*60*60*24  1000 миллисекунд в секунде , 60секунд в минуте , 60минут в часе , 24 часа в сутках 
