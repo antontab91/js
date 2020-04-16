@@ -1,27 +1,27 @@
-const tasks = [
-    { text: 'Buy milk', done: false },
-    { text: 'Pick up Tom from airport', done: false },
-    { text: 'Visit party', done: false },
-    { text: 'Visit doctor', done: true },
-    { text: 'Buy meat', done: true },
-];
-const getListItems = listItems => {
-    const listElem = document.querySelector('.list');
-    const listItemElems = listItems.sort((a, b) => a.done - b.done)
-        .map(({ text, done }) => {
-            const listItemElem = document.createElement('li');
-            listItemElem.classList.add('list__item');
-            if (done) {
-                listItemElem.classList.add('list__item_done');
-            }
-            const checkboxElem = document.createElement('input');
-            checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.checked = done;
-            checkboxElem.classList.add('list__item-checkbox');
-            listItemElem.append(checkboxElem, text);
-            return listItemElem;
+export const addImage = (imgSrc, callback) => {
+    const imgElem = document.createElement('img');
+    imgElem.setAttribute('alt', 'My Photo');
+    imgElem.src = imgSrc;
+    const containerElem = document.querySelector('.page');
+    containerElem.append(imgElem);
+    const onImageLoaded = () => {
+        const { width, height } = imgElem;
+        callback(null, { width, height });
+    };
+    imgElem.addEventListener('load', onImageLoaded);
+    imgElem.addEventListener('error', () => {
+        callback('Image load failed');
+    });
 
-        });
-    listElem.append(...listItemElems);
 };
-getListItems(tasks);
+
+const imgSrc = 'https://caricatura.ru/black/korsun/pic/karikatura-vopros_(sergey-korsun)_1597.gif';
+const callback = (error, data) => {
+    if (error) {
+        console.log(error);
+        return;
+    };
+    const { width, height } = data;
+    const sizeElem = document.querySelector('.image-size');
+    sizeElem.textContent = `${width} x ${height}`;
+}

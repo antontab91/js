@@ -1,14 +1,13 @@
-export function getTitleElement() {
-    let title = document.querySelector('.title');
-    console.dir(title);
-    return title;
-}
+export const pinger = (num, period) => {
+    let i = num;
+    console.log('Ping')
+    const interval = setInterval(() => {
+        if (--i > 0) {
+            console.log('Ping');
+        } else {
+            clearInterval(interval);
+        }
+    }, period);
 
-export function getInputElement() {
-    let input = document.querySelector('input[type="text"]');
-    console.dir(input);
-    return input;
-}
+};
 
-getTitleElement();
-getInputElement()
