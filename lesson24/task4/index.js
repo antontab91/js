@@ -11,10 +11,12 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 export const studentsBirthDays = students => {
     const sortedStudents = students.sort((a, b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate());
 
-    console.log(new Date('01/17/2008').getDate())
+    // console.log(new Date('01/17/2008').getDate())    // берет дату 
     const res = sortedStudents.reduce((acc, { name, birthDate }) => {
-        const monthsName = months[new Date(birthDate).getMonth()];
-        return { ...acc, [monthsName]: acc[monthsName] ? acc[monthsName].concat(name) : [name] };
+        // console.log(acc);
+        console.log({ name, birthDate });        // обьект
+        // const monthsName = months[new Date(birthDate).getMonth()];
+        // return { ...acc, [monthsName]: acc[monthsName] ? acc[monthsName].concat(name) : [name] };
     }, {});
 
     return res;
