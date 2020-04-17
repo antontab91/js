@@ -110,7 +110,7 @@ createBtnElem.addEventListener('click', createElem);
 listElem.addEventListener('click', function (event) {
     const target = event.target.closest('li');
     const allTasks = [...document.querySelectorAll('.list__item')];
-    tasks[allTasks.indexOf(target)].done = true;                          //присваиваю задаче , которая соответствует индексу ивент таргет дан тру 
+    tasks[allTasks.indexOf(target)].done = target.firstChild.checked;                          //присваиваю задаче , которая соответствует индексу ивент таргет дан тру 
     renderListItems(tasks);
 })
 
