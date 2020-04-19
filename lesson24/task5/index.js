@@ -80,6 +80,9 @@ function renderListItems(arr) {
 
     listElem.innerHTML = '';
     return arr.sort(function (a, b) {
+        if (a.done) {
+            return new Date(b.dateEnd) - new Date(a.dateEnd);
+        }
         return a.done - b.done;
     }).map(function (elem) {
         let listItem = document.createElement('li');
