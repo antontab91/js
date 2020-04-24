@@ -64,9 +64,19 @@ const getLocalStorageData4 = () => {
     return nyyObj;
 };
 
+const getLocalStorageData5 = () => {
+    return Object.entries(localStorage)
+        .reduce((acc, [key, value]) => {
+            return {
+                ...acc,
+                [key]: JSON.parse(value),
+            }
+        }, {});
+};
+
 
 console.log(getLocalStorageData());
 console.log(getLocalStorageData2());
 console.log(getLocalStorageData3());
 console.log(getLocalStorageData4());
-
+console.log(getLocalStorageData5());
