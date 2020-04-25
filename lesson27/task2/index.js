@@ -38,4 +38,10 @@ const onStorageChange = (event) => {
     console.log(JSON.parse(localStorage.getItem('counterValue')));
 };
 
+const onDocumentLoaded = () => {
+    counterValueElem.textContent = localStorage.getItem('counterValue') || 0;  // при загрузке документа в єлемент самих цифр устанавливаем значение локал сторадж или 0 
+}
+
+
 window.addEventListener('storage', onStorageChange);
+document.addEventListener('DOMContentLoaded', onDocumentLoaded)
