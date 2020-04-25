@@ -29,4 +29,13 @@ const changeCount = (event) => {
     counterValueElem.textContent = newValue;  // записываем  значение нью велью в элемент самих цифр 
 };
 
-counterElem.addEventListener('click', changeCount); // по клику полностью на контейнер срабатівает функция 
+counterElem.addEventListener('click', changeCount); // по клику полностью на контейнер срабатівает функция  
+
+const onStorageChange = (event) => {
+    console.log(event);
+    // counterValueElem.textContent = JSON.parse(localStorage.getItem('counterValue'));
+    counterValueElem.textContent = event.newValue;  // можно записать и так ,  а можно записать и как строкой віше . 
+    console.log(JSON.parse(localStorage.getItem('counterValue')));
+};
+
+window.addEventListener('storage', onStorageChange);
