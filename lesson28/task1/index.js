@@ -21,7 +21,7 @@ function calc(initValue) {
             return result;
         }
 
-    }
+    };
     return calculator;
 }
 console.log(calc(12).add(3).subtract(5).div(2).result());
