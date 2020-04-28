@@ -18,7 +18,7 @@ const serverResponsePromise = new Promise(resolve => {
 serverResponsePromise
     .then(response => {
         /* ...code here */
-        return JSON.stringify(response);
+        return response.json();                        // БЛИН КАК Я МОГ ТАК НАТУПИТЬ !!?? МІ ПЕРЕДАЕМ МЕТОД в котором промис в состоянии ресолвед который возвращает нужный обьект 
     })
     .then(result => {
         console.log(result); // { name: 'John', age: 20 }
