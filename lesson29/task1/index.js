@@ -11,11 +11,11 @@ export const addImage = (imgSrc, callback) => {
 
     const onImageLoaded = () => {
         const { width, height } = imgElem;
-        callback(null, { width, height });
+        callback(null, { width, height });     // !! тогда візівается калбек с єтьими аргцументами 
     }
 
     const onImageErrorLoaded = () => {
-        callback('Image load failed');
+        callback('Image load failed');        // или если єрор то только первый гргумент , который будет нулл если нет ошибки 
     }
 
     imgElem.addEventListener('load', onImageLoaded);
