@@ -27,4 +27,4 @@ export const addImage = (imgUrl) => {
     return p;
 }
 
-addImageas(imgUrl);
+// addImageas(imgUrl);
