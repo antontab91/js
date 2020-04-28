@@ -22,7 +22,6 @@ export const addImageV2 = (imgUrl) => {
         imageElem.addEventListener('load', onImageLoaded);
         imageElem.addEventListener('error', onErrorImageLoaded);
 
-
     });
     return addImageV2;
 }
