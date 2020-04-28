@@ -12,8 +12,8 @@ export const addImage = (imgUrl) => {
 
         const onImageLoaded = () => {
             const { width, height } = imageElem;
-            resolve({ width, height })
             sizeCont.textContent = `${width} x ${height}`
+            resolve({ width, height });
         };
         const onErrorImageLoaded = () => {
             reject('Image load failed');
