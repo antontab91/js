@@ -27,4 +27,4 @@ export const addImag = (imgUrl) => {
     return p;
 }
 
-addImag(imgUrl)
+addImag(imgUrl);
