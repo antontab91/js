@@ -22,4 +22,4 @@ export const asyncCalculator = num => {
     });
 };
 
-asyncCalculator(4)
+asyncCalculator(5);
