@@ -18,7 +18,7 @@ const serverResponsePromise = new Promise(resolve => {
 serverResponsePromise
     .then(response => {
         /* ...code here */
-        return response;
+        return JSON.stringify(response);
     })
     .then(result => {
         console.log(result); // { name: 'John', age: 20 }
