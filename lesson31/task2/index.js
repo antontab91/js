@@ -23,5 +23,5 @@ export const asyncCalculator = num => {
     });
 };
 
-asyncCalculator(5);
+asyncCalculator(5).then((value) => console.log(value));
 
