@@ -1,7 +1,7 @@
 const imgUrl = 'https://s3.tproger.ru/uploads/2017/04/11-js-tricks-880x308.png';
 
 export const addImageV2 = (imgUrl) => {
-    const addImageV2 = new Promise((resolve, reject) => {
+    const addImage = new Promise((resolve, reject) => {
         const pageElem = document.querySelector('.page');
         const sizeCont = document.querySelector('.image-size');  // чтобы прошла проверка на громкод, если я еще буду проверять, нужно эти строки закомментить 
         const imageElem = document.createElement('img');
@@ -22,8 +22,9 @@ export const addImageV2 = (imgUrl) => {
         imageElem.addEventListener('load', onImageLoaded);
         imageElem.addEventListener('error', onErrorImageLoaded);
 
+
     });
-    return addImageV2;
+    return addImage;
 }
 
 // addImage(imgUrl);
