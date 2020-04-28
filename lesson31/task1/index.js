@@ -23,14 +23,14 @@ export const requestUserData = userId => {
 
 
 
-requestUserData('user-1')
-    .then((data) => {
-        console.log(data);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-    .finally(() => {
-        console.log('finally');
-    });
+// requestUserData('user-1')
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     })
+//     .finally(() => {
+//         console.log('finally');
+//     });
 
