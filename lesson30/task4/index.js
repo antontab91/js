@@ -28,3 +28,6 @@ export const addImage = (imgUrl) => {
 }
 
 // addImage(imgUrl);
+const result = addImage(imgUrl);
+result.then((data) => { console.log(data) });
+result.catch((error) => { console.log(error) });
