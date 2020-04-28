@@ -18,7 +18,6 @@ successPromise
     })
     .then(result => {
         console.log(result); // 256
-        // return result;
     });
 
 /*
@@ -31,7 +30,6 @@ successPromise
     })
     .then(result => {
         console.log(result); // 320
-        // return result;
     });
 
 console.log('!!! Обратите внимание, что этот текст вывелся самым первым. Ведь это синхронный код, а промисы - асинхронны !!!');
