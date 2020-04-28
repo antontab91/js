@@ -9,6 +9,8 @@ export const addImage = (imgSrc, callback) => {
 
     const onImageLoaded = () => {
         const { width, height } = imgElem;
+        // const width = imgElem.width;
+        // const height = imgElem.height;
 
         callback(null, { width, height });
     }
