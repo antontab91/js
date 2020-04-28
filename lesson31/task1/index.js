@@ -6,7 +6,7 @@ const requestUserData = userId => {
                 reject(
                     new Error('User is not found')
                 );
-            }, 2000);
+            }, 500);
         } else {
             setTimeout(() => {
                 resolve({
