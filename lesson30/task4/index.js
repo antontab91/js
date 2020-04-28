@@ -1,6 +1,6 @@
 const imgUrl = 'https://media.proglib.io/wp-uploads/2017/12/mxresdefault.jpg';
 
-export const addImage = (imgUrl) => {
+export const addImageas = (imgUrl) => {
     const p = new Promise((resolve, reject) => {
         const pageElem = document.querySelector('.page');
         const sizeCont = document.querySelector('.image-size');
@@ -16,7 +16,7 @@ export const addImage = (imgUrl) => {
             resolve({ width, height });
         };
         const onErrorImageLoaded = () => {
-            reject('Image load failed');
+            reject(new Error('Image load failed'));
         }
 
         imageElem.addEventListener('load', onImageLoaded);
@@ -27,4 +27,4 @@ export const addImage = (imgUrl) => {
     return p;
 }
 
-// addImageas(imgUrl);
+addImageas(imgUrl);
