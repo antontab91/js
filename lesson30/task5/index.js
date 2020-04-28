@@ -1,5 +1,25 @@
 const imgUrl = 'https://s3.tproger.ru/uploads/2017/04/11-js-tricks-880x308.png';
 
+export const addImage = (url, callback) => {
+    const img = document.createElement('img');
+    img.setAttribute('alt', 'User avatar');
+    img.src = url;
+
+    const pageElem = document.querySelector('.page');
+    pageElem.append(img);
+
+    const onImageLoaded = () => {
+        const { width, height } = img;
+        callback(null, { width, height });
+    }
+
+    const onImageLoadError = () => callback('Image load failed');
+
+    img.addEventListener('load', onImageLoaded);
+
+    img.addEventListener('error', onImageLoadError);
+};
+
 export const addImageV2 = (imgUrl) => {
     const addImage = new Promise((resolve, reject) => {
         const pageElem = document.querySelector('.page');
