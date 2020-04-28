@@ -22,12 +22,6 @@ export const requestUserData = userId => {
 };
 
 
-// requestUserData('user-1')
-//     .then((data) => {
-//         console.log(data);
-//     }).catch((error) => {
-//         console.log(error);
-//     });
 
 requestUserData('user-1')
     .then((data) => {
@@ -40,7 +34,3 @@ requestUserData('user-1')
         console.log('finally');
     });
 
-// requestUserData('user-1')
-//     .then((data) => {
-//         console.log(data);
-//     });
