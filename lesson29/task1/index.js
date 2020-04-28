@@ -29,14 +29,10 @@ const myCallback = (error, data) => {
     if (error) {
         return;
     }
-
     const { width, height } = data;
     const sizeElem = document.querySelector('.image-size');
     sizeElem.textContent = `${width} x ${height}`;
     console.log(`${width} ${height}`);
-
-
-
 }
 
 
