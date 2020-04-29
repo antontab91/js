@@ -1,6 +1,7 @@
 
 const getRandomDelay = (from, to) => {
-    from + Math.random * (to - from);
+    // console.log(from + Math.random() * (to - from));
+    from + Math.random() * (to - from);
 };
 
 const request = (url) => {
@@ -19,23 +20,26 @@ const request = (url) => {
 };
 
 const servers = [
+    'https://server.com/au',
     'https://server.com/us',
     'https://server.com/eu',
-    'https://server.com/au',
 ];
 
 
 export const getUserASAP = (userId) => {
     const userUrls = servers
         .map((serverUrl) => {
+
+            // console.log(`${serverUrl}/users/${userId}`)
             return `${serverUrl}/users/${userId}`;
         });
 
     const requests = userUrls
         .map((userUrl) => {
+            // console.log(request(userUrl))
             return request(userUrl)
         });
-
+    // console.log(requests)
     return Promise.race(requests);
 };
 
