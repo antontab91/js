@@ -8,24 +8,33 @@ const getValueWithDelay = (value, delay) => {
 };
 
 const asyncNumber1 = getValueWithDelay(10, 2000);
-const asyncNumber2 = getValueWithDelay(4, 1000);
-const asyncNumber3 = getValueWithDelay(7, 5000);
+const asyncNumber2 = getValueWithDelay('4', 1000);
+const asyncNumber3 = getValueWithDelay('', 5000);
+const asyncNumber4 = getValueWithDelay(false, 500);
+const asyncNumber5 = getValueWithDelay(54, 3000);
+const asyncNumber6 = getValueWithDelay(NaN, 1500);
 
 const getSumValues = (values) => {
-    return values.reduce((acc, value) => {
-
-        // console.log(acc + value.value)
-        return acc + value.value;
-    }, 0);
+    return values
+        .filter((value) => {
+            // console.log(!isNaN(value))
+            return !isNaN(value);
+        })
+        .reduce((acc, num) => {
+            return acc + Number(num);
+        }, 0);
 }
 
 export const asyncSum = (...asyncNumbers) => {
     console.log(asyncNumbers);
-    return Promise.allSettled(asyncNumbers)
+    return Promise.all(asyncNumbers)
         .then((values) => {
-            console.log(values)
-            console.log(getSumValues(values));
-            getSumValues(values);
+            // console.log(values)
+            return getSumValues(values);
+            // console.log(getSumValues(values));
         });
 };
-// asyncSum(asyncNumber1, asyncNumber2, asyncNumber3);
+asyncSum(asyncNumber1, asyncNumber2, asyncNumber3, asyncNumber4, asyncNumber5, asyncNumber6)
+    .then((result) => {
+        console.log(result);
+    });
