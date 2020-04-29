@@ -28,10 +28,13 @@ const getSumValues = (values) => {
 export const asyncSum = (...asyncNumbers) => {
     console.log(asyncNumbers);
     return Promise.all(asyncNumbers)
-        .then((values) => {
+        .then((values, error) => {
             // console.log(values)
             return getSumValues(values);
             // console.log(getSumValues(values));
+        })
+        .catch(() => {
+            return Promise.reject(new Error('Can\'t calculate'))
         });
 };
 asyncSum(asyncNumber1, asyncNumber2, asyncNumber3, asyncNumber4, asyncNumber5, asyncNumber6)
