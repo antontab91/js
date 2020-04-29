@@ -28,4 +28,4 @@ export const asyncSum = (...asyncNumbers) => {
             return getSumValues(values);
         });
 };
-asyncSum(asyncNumber1, asyncNumber2, asyncNumber3);
+// asyncSum(asyncNumber1, asyncNumber2, asyncNumber3);
