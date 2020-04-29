@@ -25,7 +25,7 @@ export const asyncSum = (...asyncNumbers) => {
         .then((values) => {
             console.log(values)
             console.log(getSumValues(values));
-            return getSumValues(values);
+            getSumValues(values);
         });
 };
 // asyncSum(asyncNumber1, asyncNumber2, asyncNumber3);
