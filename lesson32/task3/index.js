@@ -4,9 +4,9 @@
 
 /* ...code here */
 
-const makePromise = (num) => {
-    // return Promise.resolve(num);
-    return new Promise(resolve => resolve(num));
+export const makePromise = (num) => {
+    // return new Promise(resolve => resolve(num));
+    return Promise.resolve(num);
 }
 
 
