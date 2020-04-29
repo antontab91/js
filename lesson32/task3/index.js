@@ -5,7 +5,8 @@
 /* ...code here */
 
 const makePromise = (num) => {
-    return Promise.resolve(num);
+    // return Promise.resolve(num);
+    return new Promise(resolve => resolve(num));
 }
 
 
