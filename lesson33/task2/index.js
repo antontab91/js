@@ -11,16 +11,21 @@ export const getTasksList = () => {
 
 // export const getTaskById = (taskId) => {
 //     return fetch(`${baseUrl}`)
-//         .then(response => response.json()).then((result) => {
+//         .then((response) => {
+//             return response.json()
+//         }).then((result) => {
 //             return result[taskId - 1]
 //         });
 // };
 
 export const getTaskById = (taskId) => {
     return fetch(`${baseUrl}/${taskId}`)
-        .then(response => response.json())
+        .then((response) => {
+            return response.json()
+        });
 };
 
-// console.log(getTaskById(1));
+
+console.log(getTaskById(1));
 
 
