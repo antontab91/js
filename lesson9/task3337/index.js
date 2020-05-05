@@ -11,7 +11,7 @@ const customers = {
 
 
 function getCustomersList(obj) {
-    const newObj = Object.assign({}, obj);
+    const newObj = { ...obj };
     return Object.entries(newObj).map((entey) => {
         // debugger;
         // console.log(arr);
