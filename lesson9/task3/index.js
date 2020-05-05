@@ -49,10 +49,10 @@ function getCustomersList(obj) {
     return Object.entries(obj).map((entey) => {
         // debugger;
         // console.log(arr);
-        return Object.assign(entey[1], { id: entey[0] })
-        // .sort((a, b) => {
-        //     return a.age - b.age;
-        // });
+        return Object.assign(entey[1], { id: entey[0] });
+
+    }).sort((a, b) => {
+        return a.age - b.age;
     });
 }
 
