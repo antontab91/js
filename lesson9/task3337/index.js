@@ -10,17 +10,17 @@ const customers = {
 };
 
 
-function getCustomersList(obj) {
+// function getCustomersList(obj) {
 
-    return Object.entries(obj).map((entey) => {
-        // debugger;
-        // console.log(arr);
-        return Object.assign(...entey[1], { id: entey[0] });
+//     return Object.entries(obj).map((entey) => {
+//         // debugger;
+//         // console.log(arr);
+//         return Object.assign(...entey[1], { id: entey[0] });
 
-    }).sort((a, b) => {
-        return a.age - b.age;
-    });
-}
+//     }).sort((a, b) => {
+//         return a.age - b.age;
+//     });
+// }
 
 
 // function getCustomersList(obj) {
@@ -31,9 +31,6 @@ function getCustomersList(obj) {
 //         });
 // }
 
-const getCustomersList = (obj) => Object.entries(obj)
-    .map(([id, value]) => ({ id, ...value }))
-    .sort((a, b) => a.age - b.age);
 
 // function getCustomersList(object) {
 //     const copyObj = Object.assign({}, object)
@@ -43,6 +40,9 @@ const getCustomersList = (obj) => Object.entries(obj)
 //     return sortArrayOfObjects;
 // }
 
+const getCustomersList = (obj) => Object.entries(obj)
+    .map(([id, value]) => ({ id, ...value }))
+    .sort((a, b) => a.age - b.age);
 console.log(getCustomersList(customers));
 
 // return Object.entries(obj).map(([id, value]) => {
