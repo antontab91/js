@@ -1,5 +1,5 @@
-let keyList = ['name', 'address', 'age'];
-let valuesList = ['Bob', 'Ukraine', 34];
+// let keyList = ['name', 'address', 'age'];
+// let valuesList = ['Bob', 'Ukraine', 56];
 
 const buildObject = (keyList, valuesList) => {
     // let result = []
@@ -8,7 +8,7 @@ const buildObject = (keyList, valuesList) => {
     }, {});
 };
 
-console.log(buildObject(keyList, valuesList));
-buildObject(keyList, valuesList);
+// console.log(buildObject(keyList, valuesList));
+// buildObject(keyList, valuesList);
 
 
