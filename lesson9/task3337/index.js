@@ -12,12 +12,13 @@ const customers = {
 
 
 function getCustomersList(obj) {
-    return Object.entries(obj).map((entey) => {
+    const newObj = Object.assign({}, obj);
+    return Object.entries(newObj).map((entey) => {
         // debugger;
         // console.log(arr);
         return Object.assign(entey[1], { id: entey[0] });
 
-    }).slice().sort((a, b) => {
+    }).sort((a, b) => {
         return a.age - b.age;
     });
 }
