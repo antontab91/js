@@ -8,7 +8,7 @@ const buildObject = (kays, values) => {
     }, {});
 };
 
-console.log(buildObject(kays, values));
-buildObject(kays, values);
+// console.log(buildObject(kays, values));
+// buildObject(kays, values);
 
 
