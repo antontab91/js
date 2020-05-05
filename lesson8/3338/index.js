@@ -1,10 +1,10 @@
-let kays = ['name', 'address', 'age'];
-let values = ['Bob', 'Ukraine', 34];
+let kaysList = ['name', 'address', 'age'];
+let valuesList = ['Bob', 'Ukraine', 34];
 
-const buildObject = (kays, values) => {
+const buildObject = (kaysList, valuesList) => {
     // let result = []
-    return kays.reduce((acc, el, index) => {
-        return { ...acc, [el]: values[index] }
+    return kaysList.reduce((acc, el, index) => {
+        return { ...acc, [el]: valuesList[index] }
     }, {});
 };
 
