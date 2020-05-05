@@ -19,7 +19,7 @@ function getCustomersList(customers) {
     let newMassive = [];                            // определил массив , куда буду записывать отсортированные данные
 
     for (let i of values) {
-        newMassive.push(Object.assign({}, i));      // обьеденил массивы и запушил в ньюмесив
+        newMassive.push(Object.assign({}, i));
     }
 
 
