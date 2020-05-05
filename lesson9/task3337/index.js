@@ -39,7 +39,3 @@ const getCustomersList = (obj) => Object.entries(obj)
 
 console.log(getCustomersList(customers));
 
-// return Object.entries(obj).map(([id, value]) => {
-//     return { ...value, id };
-
-// })
