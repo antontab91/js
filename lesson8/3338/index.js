@@ -1,14 +1,14 @@
-// let keysList = ['name', 'address', 'age'];
+// let keyList = ['name', 'address', 'age'];
 // let valuesList = ['Bob', 'Ukraine', 34];
 
-const buildObject = (keysList, valuesList) => {
+const buildObject = (keyList, valuesList) => {
     // let result = []
-    return keysList.reduce((acc, el, index) => {
+    return keyList.reduce((acc, el, index) => {
         return { ...acc, [el]: valuesList[index] }
     }, {});
 };
 
-// console.log(buildObject(keysList, valuesList));
-// buildObject(keysList, valuesList);
+// console.log(buildObject(keyList, valuesList));
+// buildObject(keyList, valuesList);
 
 
