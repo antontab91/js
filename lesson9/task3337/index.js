@@ -32,13 +32,6 @@ const customers = {
 // }
 
 
-// function getCustomersList(object) {
-//     const copyObj = Object.assign({}, object)
-//     const objectToArray = Object.entries(copyObj)
-//     const addIdValue = objectToArray.map((a) => ({ id: a[0], ...a[1] }))
-//     const sortArrayOfObjects = addIdValue.sort((a, b) => a.age - b.age)
-//     return sortArrayOfObjects;
-// }
 
 const getCustomersList = (obj) => Object.entries(obj)
     .map(([id, value]) => ({ id, ...value }))
