@@ -7,8 +7,7 @@ const customers = {
         name: 'Tom',
         age: 17
     }
-}
-
+};
 
 
 function getCustomersList(obj) {
