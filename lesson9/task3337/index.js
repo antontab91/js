@@ -9,9 +9,9 @@ const customers = {
     }
 };
 
+const newObj = { ...customers };
 
-function getCustomersList(obj) {
-    const newObj = { ...obj };
+function getCustomersList(newObj) {
     return Object.entries(newObj).map((entey) => {
         // debugger;
         // console.log(arr);
@@ -22,4 +22,4 @@ function getCustomersList(obj) {
     });
 }
 
-console.log(getCustomersList(customers));
+console.log(getCustomersList(newObj));
