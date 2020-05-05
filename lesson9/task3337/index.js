@@ -22,6 +22,19 @@ function getCustomersList(obj) {
     });
 }
 
+
+// function getCustomersList(obj) {
+//     return Object.entries(newObj)
+//         .map(([id, value]) => ({ id, ...value }))
+//         .sort((a, b) => {
+//             return a.age - b.age;
+//         });
+// }
+
+const getCustomersList = (obj) => Object.entries(obj)
+    .map(([id, value]) => ({ id, ...value }))
+    .sort((a, b) => a.age - b.age);
+
 // function getCustomersList(object) {
 //     const copyObj = Object.assign({}, object)
 //     const objectToArray = Object.entries(copyObj)
@@ -31,3 +44,8 @@ function getCustomersList(obj) {
 // }
 
 console.log(getCustomersList(customers));
+
+// return Object.entries(obj).map(([id, value]) => {
+//     return { ...value, id };
+
+// })
