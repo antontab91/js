@@ -46,7 +46,7 @@ const updateUser = (userId) => {
                 age: 209,
             }
         ),
-    })
+    });
 }
 
 
