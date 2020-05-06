@@ -58,7 +58,9 @@ const deleteUser = (userId) => {
 
 // console.log(createUser(user));
 // console.log(getUserById(68));
-console.log(updateUser(65));
-console.log(deleteUser(44));
-console.log(getUsersList());
+// console.log(updateUser(65));
+// console.log(deleteUser(44));
+// console.log(getUsersList());
 // console.log(getUserById(65));
+
+export { getUsersList, getUserById, createUser, updateUser, deleteUser };
