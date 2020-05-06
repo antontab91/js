@@ -35,17 +35,17 @@ const createUser = (user) => {
     });
 };
 
-const updateUser = (userId) => {
+const updater = {
+    firstName: "bulbazavr",
+    lastName: "pikachu",
+    age: 209,
+}
+
+const updateUser = (userId, updater) => {
     return fetch(`${baseUrl}/${userId}`, {
         method: 'PUT',
         headers: headersJson,
-        body: JSON.stringify(
-            {
-                firstName: "bulbazavr",
-                lastName: "pikachu",
-                age: 209,
-            }
-        ),
+        body: JSON.stringify(updater),
     });
 }
 
@@ -58,7 +58,7 @@ const deleteUser = (userId) => {
 
 // console.log(createUser(user));
 // console.log(getUserById(68));
-// console.log(updateUser(65));
+// console.log(updateUser(65, updater));
 // console.log(deleteUser(44));
 // console.log(getUsersList());
 // console.log(getUserById(65));
