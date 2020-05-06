@@ -2,7 +2,7 @@ const users = [
     { id: '1', name: 'Bob' },
     { id: '2', name: 'Tom' },
     { id: '3', name: 'Sam' },
-    { id: '4', name: 'Tad' }
+    { id: '4', name: 'Tad' },
 ];
 
 const admins = ['1', '3'];
