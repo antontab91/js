@@ -1,20 +1,4 @@
-const customers = {
-    'customer-id-1': {
-        name: 'William',
-        age: 54
-    },
-    'customer-id-2': {
-        name: 'Tom',
-        age: 17
-    }
-};
-
-const getCustomersList = (obj) => {
-    return Object.entries(obj).map((el) => {
-        return Object.assign({}, { id: el[0] }, el[1])
-    }).sort((a, b) => {
-        return a.age - b.age;
-    });
+const compareObjects = (obj1, obj2) => {
+    console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+    return (JSON.stringify(obj1) === JSON.stringify(obj2));
 }
-
-console.log(getCustomersList(customers));
