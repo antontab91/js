@@ -15,6 +15,6 @@ let arr = ['  1.9 ', '16.4', 17, ' 1 dollar '];
 
 const cleanTransactionsList = (money) => {
     return money.filter(el => isFinite(el))
-        .map(tr > `$${Number.parseFloat(tr).toFixed(2)}`);
+        .map(tr => `$${Number.parseFloat(tr).toFixed(2)}`);
 }
 console.log(cleanTransactionsList(arr));

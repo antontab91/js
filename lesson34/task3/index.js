@@ -24,10 +24,28 @@ const vlidationVheck = () => {
 
 const sendFormData = () => {
     event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
-    const getFormData = [...loginFormElem];
-    console.log(getFormData);
-    const getFormData2 = [...new FormData(loginFormElem)];
-    console.log(getFormData2);
+    const userData = Object.fromEntries([...new FormData(loginFormElem)]);
+    getAnswer(userData)
+        .then((response) => {
+            return (response).json();
+        }).then((result) => {
+            alert(JSON.stringify(result));
+            loginFormElem.reset();
+            submitBtnElem.disabled = true;
+        }).catch(() => {
+            errorTextElem.textContent = 'Failed to create user';
+            loginFormElem.reset();
+            submitBtnElem.disabled = true;
+        });
+
+}
+
+const getAnswer = (userData) => {
+    return fetch(allUsers, {
+        method: 'POST',
+        headers: headersJson,
+        body: JSON.stringify(userData),
+    })
 }
 
 
@@ -37,3 +55,6 @@ const sendFormData = () => {
 
 loginFormElem.addEventListener('submit', sendFormData);
 loginFormElem.addEventListener('input', vlidationVheck);
+
+
+
