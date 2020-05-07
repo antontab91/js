@@ -1,7 +1,7 @@
 const loginForm = document.querySelector('.login-form');
 const submitBtn = document.querySelector('.submit-button');
 const errorText = document.querySelector('.error-text');
-const allUsers = 'https://5eb321a1974fee0016ecd32b.mockapi.io/users';
+const allUsers = 'https://5e98af0c5eabe7001681c458.mockapi.io/v1/users';
 const headersJson = { 'Content-Type': 'application/json; charset=utf-8' };
 
 const checkValidation = () => {
