@@ -5,14 +5,14 @@ const allUsers = 'https://5eb321a1974fee0016ecd32b.mockapi.io/users';
 const headersJson = { 'Content-Type': 'application/json; charset=utf-8' };
 
 const checkValidation = () => {
-    if (loginForm.reportValidity()) {
+    if (loginForm.reportValidity()) {  // елси все проверки дочерних єлементов тру(тоесть все поля введені) - значит кнопка становится активной 
         submitBtn.disabled = false;
     }
 }
 const onFormSubmit = event => {
-    event.preventDefault();
-    const formData = [...new FormData(loginForm)]
-        .reduce((acc, arr) => ({ ...acc, [arr[0]]: arr[1] }), {});
+    event.preventDefault();  // собітие не будет выполняться как обычно 
+    const formData = [...new FormData(loginForm)]  // клонировали форму и скопировали в массив 
+        .reduce((acc, arr) => ({ ...acc, [arr[0]]: arr[1] }), {}); // записали в обьект данніе из формі 
     addNewUser(formData)
         .then(response => response.json())
         .then(user => {
