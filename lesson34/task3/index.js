@@ -23,7 +23,7 @@ const vlidationVheck = () => {
 };
 
 const sendFormData = () => {
-    event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
+    event.preventDefault();  // говорю євенту что хочу чтобі он изменил дефолтное поведение 
     const formData = [...new FormData(loginForm)]
         .reduce((acc, arr) => ({ ...acc, [arr[0]]: arr[1] }), {});
     getAnswer(formData)
@@ -38,8 +38,7 @@ const sendFormData = () => {
             loginForm.reset();
             submitBtn.disabled = true;
         });
-
-}
+};
 
 const getAnswer = (formData) => {
     return fetch(allUsers, {
@@ -47,15 +46,15 @@ const getAnswer = (formData) => {
         headers: headersJson,
         body: JSON.stringify(formData),
     })
+
+    loginFormElem.addEventListener('submit', sendFormData);
+    loginFormElem.addEventListener('input', vlidationVheck);
 }
 
 
 
 
 
-
-loginFormElem.addEventListener('submit', sendFormData);
-loginFormElem.addEventListener('input', vlidationVheck);
 
 
 
