@@ -33,7 +33,7 @@ const sendFormData = (event) => {  // не забіть что функция , 
             loginFormElem.reset();
             submitBtnElem.disabled = true;
         }).catch(() => {
-            errorTextElem = 'Failed to create user';
+            errorTextElem.textContent = 'Failed to create user';
             loginFormElem.reset();
             submitBtnElem.disabled = true;
         });
