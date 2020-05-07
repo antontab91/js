@@ -27,7 +27,7 @@ const sendFormData = () => {
     const userData = Object.fromEntries([...new FormData(loginFormElem)]);
     getAnswer(userData)
         .then((response) => {
-            return (response).json();
+            return response.json();
         }).then((result) => {
             alert(JSON.stringify(result));
             loginFormElem.reset();
