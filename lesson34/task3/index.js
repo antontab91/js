@@ -28,14 +28,14 @@ const sendFormData = () => {
     getAnswer(userData)
         .then((response) => {
             return response.json();
-        }).then((result) => {
-            alert(JSON.stringify(result));
+        }).then((user) => {
+            alert(JSON.stringify(user));
             loginFormElem.reset();
             submitBtnElem.disabled = true;
         }).catch(() => {
             errorTextElem.textContent = 'Failed to create user';
-            loginFormElem.reset();
-            submitBtnElem.disabled = true;
+            loginForm.reset();
+            submitBtn.disabled = true;
         });
 
 }
