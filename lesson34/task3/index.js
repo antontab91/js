@@ -23,38 +23,38 @@ const vlidationVheck = () => {
 };
 
 const sendFormData = () => {
-    event.preventDefault();  // говорю євенту что хочу чтобі он изменил дефолтное поведение 
-    const formData = [...new FormData(loginForm)]
-        .reduce((acc, arr) => ({ ...acc, [arr[0]]: arr[1] }), {});
-    getAnswer(formData)
+    event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
+    const userData = Object.fromEntries([...new FormData(loginFormElem)]);
+    getAnswer(userData)
         .then((response) => {
-            return response.json();
-        }).then((user) => {
-            alert(JSON.stringify(user));
+            return (response).json();
+        }).then((result) => {
+            alert(JSON.stringify(result));
             loginFormElem.reset();
             submitBtnElem.disabled = true;
         }).catch(() => {
-            errorTextElem.textContent = 'Failed to create user';
-            loginForm.reset();
-            submitBtn.disabled = true;
+            errorTextElem = 'Failed to create user';
+            loginFormElem.reset();
+            submitBtnElem.disabled = true;
         });
-};
 
-const getAnswer = (formData) => {
+}
+
+const getAnswer = (userData) => {
     return fetch(allUsers, {
         method: 'POST',
         headers: headersJson,
-        body: JSON.stringify(formData),
+        body: JSON.stringify(userData),
     })
-
-    loginFormElem.addEventListener('submit', sendFormData);
-    loginFormElem.addEventListener('input', vlidationVheck);
 }
 
 
 
 
 
+
+loginFormElem.addEventListener('submit', sendFormData);
+loginFormElem.addEventListener('input', vlidationVheck);
 
 
 
