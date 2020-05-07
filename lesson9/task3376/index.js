@@ -10,9 +10,9 @@ const admins = ['1', '3'];
 
 
 
-const markAdmins = (users, admins) => {
+const markAdmins = (users, adminsId) => {
     return users.map((user) => {
-        const isAdmin = admins.includes(user.id);
+        const isAdmin = adminsId.includes(user.id);  // дописываем обьекту поле 
         return { ...user, isAdmin };
     });
 };
