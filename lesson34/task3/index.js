@@ -24,7 +24,7 @@ const vlidationVheck = () => {
 
 const sendFormData = () => {
     event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
-    const getFormData = loginFormElem;
+    const getFormData = [...loginFormElem];
     console.log(getFormData);
     const getFormData2 = [...new FormData(loginFormElem)];
     console.log(getFormData2);
