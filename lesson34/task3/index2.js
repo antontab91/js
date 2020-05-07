@@ -34,6 +34,5 @@ const addNewUser = user => {
         method: 'POST',
         headers: headersJson,
         body: JSON.stringify(user),
-
     });
 };
