@@ -25,7 +25,7 @@ const vlidationVheck = () => {
 const sendFormData = () => {
     event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
     const userData = Object.fromEntries([...new FormData(loginFormElem)]);
-    getAnswer(userData)
+    addNewUser(userData)
         .then((response) => {
             return response.json();
         }).then((result) => {
@@ -40,13 +40,14 @@ const sendFormData = () => {
 
 }
 
-const getAnswer = (userData) => {
+const addNewUser = user => {
     return fetch(allUsers, {
         method: 'POST',
         headers: headersJson,
-        body: JSON.stringify(userData),
-    })
-}
+        body: JSON.stringify(user),
+
+    });
+};
 
 
 
