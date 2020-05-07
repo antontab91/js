@@ -22,7 +22,7 @@ const vlidationVheck = () => {
         : submitBtnElem.disabled = true;
 };
 
-const sendFormData = () => {
+const sendFormData = (event) => {
     event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
     const userData = Object.fromEntries([...new FormData(loginFormElem)]);
     getAnswer(userData)
@@ -37,24 +37,25 @@ const sendFormData = () => {
             loginFormElem.reset();
             submitBtnElem.disabled = true;
         });
+};
 
-}
+
+
+loginFormElem.addEventListener('submit', sendFormData);
+loginFormElem.addEventListener('input', vlidationVheck);
 
 const getAnswer = (userData) => {
     return fetch(allUsers, {
         method: 'POST',
         headers: headersJson,
         body: JSON.stringify(userData),
-    })
-}
+    });
+};
 
 
 
 
 
-
-loginFormElem.addEventListener('submit', sendFormData);
-loginFormElem.addEventListener('input', vlidationVheck);
 
 
 
