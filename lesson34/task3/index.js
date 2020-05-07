@@ -32,11 +32,13 @@ const sendFormData = (event) => {  // не забіть что функция , 
             alert(JSON.stringify(result));
             loginFormElem.reset();
             submitBtnElem.disabled = true;
-        }).catch(() => {
+        })
+        .catch(() => {
             errorTextElem.textContent = 'Failed to create user';
             loginFormElem.reset();
             submitBtnElem.disabled = true;
         });
+
 };
 
 
