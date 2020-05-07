@@ -1,4 +1,4 @@
-const parseUser = userData => {
+export const parseUser = userData => {
     try {
         return JSON.parse(userData);
     } catch {
