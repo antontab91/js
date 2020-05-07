@@ -1,8 +1,6 @@
-const userName = '{"type" : "bulbazar"}';
-export const parseUser = jsonUser => {
+export const parseUser = userData => {
     try {
-        const user = JSON.parse(jsonUser);
-        return user;
+        return JSON.parse(userData);
     } catch {
         return null;
     }
