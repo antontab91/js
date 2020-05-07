@@ -24,9 +24,7 @@ const vlidationVheck = () => {
 
 const sendFormData = () => {
     event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
-    // const userData = Object.fromEntries([...new FormData(loginFormElem)]);
-    const userData = [...new FormData(loginForm)]  // клонировали форму и скопировали в массив 
-        .reduce((acc, arr) => ({ ...acc, [arr[0]]: arr[1] }), {})
+    const userData = Object.fromEntries([...new FormData(loginFormElem)]);
     getAnswer(userData)
         .then((response) => {
             return response.json();
