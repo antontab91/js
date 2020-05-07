@@ -22,7 +22,7 @@ const vlidationVheck = () => {
         : submitBtnElem.disabled = true;
 };
 
-const sendFormData = (event) => {
+const sendFormData = (event) => {  // не забіть что функция , если мі хотим остановить дефолтное собітие ДОЛЖНГА БЛЯТЬ ПРИНИМАТЬ САМО СОБЮІТИЕ!!!
     event.preventDefault(); // говорю євенту что хочу чтобі он изменил дефолтное поведение 
     const userData = Object.fromEntries([...new FormData(loginFormElem)]);
     getAnswer(userData)
