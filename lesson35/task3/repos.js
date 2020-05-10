@@ -1,4 +1,9 @@
-const listElem = document.querySelector('.repo-list')
+const listElem = document.querySelector('.repo-list');
+
+export const cleanReposList = () => {
+    listElem.innerHTML = '';
+}
+
 
 export const renderPepos = (reposList) => {
     const reposListElem = reposList
@@ -9,8 +14,9 @@ export const renderPepos = (reposList) => {
 
             return listElem;
         });
-    listElem.innerHTML = '';
+    cleanReposList();
     listElem.append(...reposListElem);
-}
+};
 
-// .repo - list
+
+

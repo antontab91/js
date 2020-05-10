@@ -1,6 +1,6 @@
 import { fetchUserData, fetchRepositories } from './gateways.js';
 import { renderUserData } from './user.js';
-import { renderPepos } from './repos.js';
+import { renderPepos, cleanReposList } from './repos.js';
 import { showSpinner, hideSpinner } from './spinner.js';
 
 
@@ -16,12 +16,12 @@ const defaultUser = {
 renderUserData(defaultUser);
 
 const showBtn = document.querySelector('.name-form__btn');
-const nameFormInput = document.querySelector('.name-form__input')
-
+const nameFormInput = document.querySelector('.name-form__input');
 
 
 const getData = () => {
     showSpinner();
+    cleanReposList();
     const userName = nameFormInput.value;
     fetchUserData(userName)                                 // после подписки первое что нужно сделать - получить данніе пользователя для єтого нужно получить имя пользователя , которое мі хотим получить 
         .then((userData) => {
