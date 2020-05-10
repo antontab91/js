@@ -5,12 +5,12 @@ import { showSpinner, hideSpinner } from './spinner.js';
 
 
 
-const defaultAvatar = 'https://img.favpng.com/1/3/11/computer-icons-github-user-social-network-png-favpng-AviyaxLFhxtMhcfp0KZ6Xx1Sc.jpg';  //начальный аватар
+const defaultAvatar = 'https://avatars3.githubusercontent.com/u10001';  //начальный аватар
 
 const defaultUser = {
     avatar_url: defaultAvatar,
-    name: 'Petya',
-    location: 'Petushok',
+    name: '',
+    location: '',
 };
 
 renderUserData(defaultUser);
