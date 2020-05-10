@@ -5,6 +5,6 @@ export const parseUser = jsonUser => {
         return user;
     } catch {
         return null;
-    }
+    };
 };
 //parseUser(userName);
