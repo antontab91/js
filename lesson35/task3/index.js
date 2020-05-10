@@ -32,11 +32,13 @@ const getData = () => {
                 .then((reposList) => {
                     console.log(reposList);
                     renderPepos(reposList);
-                    hideSpinner();
                 })
                 .catch((err) => {
-                    hideSpinner();
                     alert(err.message);
+                })
+                .finally(() => {
+                    hideSpinner();
+
                 });
         });
 };
