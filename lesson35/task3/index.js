@@ -38,7 +38,6 @@ const getData = () => {
                 })
                 .finally(() => {
                     hideSpinner();
-
                 });
         });
 };
