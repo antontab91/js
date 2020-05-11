@@ -1,11 +1,17 @@
-function fetchUserData(userName) {
-    return fetch(`https://api.github.com/users/${userName}`)
-        .then(response => response.json());
+const fetchUserData = async userName => {
+    const response = await fetch(`https://api.github.com/users/${userName}`);
+    if (response.ok) {
+        return await response.json();
+    }
+    throw new Error('Failed to load data');
 };
 
-function fetchRepositories(url) {
-    return fetch(url)
-        .then(response => response.json());
+const fetchRepositories = async url => {
+    const response = await fetch(url)
+    if (response.ok) {
+        return await response.json();
+    }
+    throw new Error('Failed to load data');
 }
 
 export { fetchUserData, fetchRepositories };
