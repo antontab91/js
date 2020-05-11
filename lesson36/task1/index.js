@@ -16,7 +16,7 @@
 // console.log('hi');
 
 
-const getUser = async userId => {
+const fetchUser = async userId => {
     try {
         const response = await fetch((`https://api.github.com/users/${userId}`));
         // console.log(response);
@@ -31,7 +31,7 @@ const getUser = async userId => {
     }
 };
 
-getUser('fasebook')
+fetchUser('fasebook')
     .then((userData) => {
         console.log(userData);
     })
