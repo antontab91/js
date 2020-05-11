@@ -31,5 +31,11 @@ const getUser = async userId => {
     }
 };
 
-getUser('fasebook');
+getUser('fasebook')
+    .then((userData) => {
+        console.log(userData);
+    })
+    .catch((err) => {
+        alert(err.message);
+    });
 // console.log(getUser('fasebook'));
