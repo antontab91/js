@@ -1,4 +1,4 @@
-async function getUsersBlogs([...userIds]) {
+export const getUsersBlogs = async ([...userIds]) => {
     console.log(userIds);
     const requests = userIds.map((userId) => {
         return fetch(`https://api.github.com/users/${userId}`)
@@ -17,12 +17,14 @@ async function getUsersBlogs([...userIds]) {
 }
 
 
-// https://api.github.com/users/USERID
-// console.log(getUsersBlogs(['google', 'facebook', 'gaearon']))
+
+
+https://api.github.com/users/USERID
+console.log(getUsersBlogs(['google', 'facebook', 'gaearon']))
 getUsersBlogs(['google', 'facebook', 'gaearon'])
     .then(linksList => console.log(linksList));
 
 
-// ["https://opensource.google/", "https://opensource.fb.com", "http://twitter.com/dan_abramov"]
+// // ["https://opensource.google/", "https://opensource.fb.com", "http://twitter.com/dan_abramov"]
 
-export { getUsersBlogs };
+// export { getUsersBlogs };
