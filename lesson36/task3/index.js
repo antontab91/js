@@ -27,4 +27,3 @@ getUsersBlogs(['google', 'facebook', 'gaearon'])
 
 // // ["https://opensource.google/", "https://opensource.fb.com", "http://twitter.com/dan_abramov"]
 
-// export { getUsersBlogs };
