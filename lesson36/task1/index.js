@@ -16,7 +16,7 @@
 // console.log('hi');
 
 
-const fetchUser = async userId => {
+export const fetchUser = async userId => {
     try {
         const response = await fetch((`https://api.github.com/users/${userId}`));
         // console.log(response);
