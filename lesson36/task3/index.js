@@ -23,4 +23,6 @@ getUsersBlogs(['google', 'facebook', 'gaearon'])
     .then(linksList => console.log(linksList));
 
 
-            // ["https://opensource.google/", "https://opensource.fb.com", "http://twitter.com/dan_abramov"]
+// ["https://opensource.google/", "https://opensource.fb.com", "http://twitter.com/dan_abramov"]
+
+export { getUsersBlogs };
