@@ -1,8 +1,7 @@
 export function makeCounter() {
     let count = 0;
     return function () {
-        count++;
-        return count;
+        return count++;
     };
 }
 
@@ -15,3 +14,4 @@ console.log(caunter1())
 console.log(caunter2())
 console.log(caunter1())
 console.log(caunter2())
+
