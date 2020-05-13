@@ -48,7 +48,7 @@ export const createLogger = () => {
     }
 }
 
-let logger1 = createLogger();
+// let logger1 = createLogger();
 
 // console.log(logger1.warn('dddd'));
 // console.log(logger1.warn('tttt'));
