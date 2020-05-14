@@ -2,34 +2,25 @@ export const createLogger = () => {
     const logs = [];
 
     function warn(text) {
-        logs.push({
-            message: text,
-            dateTimeL: new Date(),
-            type: 'warn',
-        });
+        addMessage('warn', text);
     }
     function error(text) {
-        logs.push({
-            message: text,
-            dateTimeL: new Date(),
-            type: 'error',
-        });
+        addMessage('error', text);
     }
     function log(text) {
+        addMessage('log', text);
+    }
+
+    function addMessage(type, text) {
         logs.push({
             message: text,
             dateTimeL: new Date(),
-            type: 'log',
+            type: type,
         });
     }
 
-    function getRecords(text) {
-        // logs.filter((el) => {
-        //     return el.type === text;
-        // }).sort((a, b) => {
-        //     return b.dateTime - a.dateTime;
-        // });
 
+    function getRecords(text) {
         return (text ?
             logs.filter((el) => {
                 return el.type === text;
@@ -56,3 +47,16 @@ export const createLogger = () => {
 // console.log(logger1.warn('gggg'));
 
 // console.log(logger1.getRecords())
+
+// var a = 17;
+
+// function test() {
+//     var a = 10;
+//     if (a) {
+//         var a = 1;
+//         console.log(a);
+//     }
+// }
+
+// test();
+// console.log(a);
