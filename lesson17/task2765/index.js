@@ -1,4 +1,4 @@
-const timer = {
+export const timer = {
     secondsPassed: 0,
     minsPassed: 0,
     timerId: 0,
@@ -29,12 +29,12 @@ const timer = {
     },
 };
 
-const user = {
-    name: 'Andrey',
-    printer(age) {
-        console.log(`hello ${this.name}, ${age}`)
-    },
+// const user = {
+//     name: 'Andrey',
+//     printer(age) {
+//         console.log(`hello ${this.name}, ${age}`)
+//     },
 
-}
+// }
 
-let func = user.printer;
+// let func = user.printer;
