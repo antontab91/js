@@ -56,10 +56,9 @@
 // console.log(user);
 
 
-export function bind(context, func, ...xz) {
-  console.log(...xz)
+
+export function bind(fn, context) {
   return function (...arg) {
-    console.log(...arg)
-    return func.apply(context, [...xz, ...arg]);
+    return fn.apply(context, [...arg]);
   };
 }
