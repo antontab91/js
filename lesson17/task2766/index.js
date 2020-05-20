@@ -36,14 +36,14 @@
 // //put func to the context
 // //call func as object property
 
-export function bind(func, context, ...args) {
+// export function bind(func, context, ...args) {
 
-  return function (...args1) {
-    let copyContext = Object.assign({}, context)
-    copyContext.temp = func;
-    return copyContext.temp(...args, ...args1);
-  };
-}
+//   return function (...args1) {
+//     let copyContext = Object.assign({}, context)
+//     copyContext.temp = func;
+//     return copyContext.temp(...args, ...args1);
+//   };
+// }
 
 // function bind4(func, context, ...args) {
 //   return function (...funcArgs) {
@@ -54,3 +54,12 @@ export function bind(func, context, ...args) {
 
 
 // console.log(user);
+
+
+export function bind(context, func, ...xz) {
+  console.log(...xz)
+  return function (...arg) {
+    console.log(...arg)
+    return func.apply(context, [...xz, ...arg]);
+  };
+}
