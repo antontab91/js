@@ -36,7 +36,7 @@
 // //put func to the context
 // //call func as object property
 
-function bind(func, context, ...args) {
+export function bind(func, context, ...args) {
 
   return function (...args1) {
     let copyContext = Object.assign({}, context)
