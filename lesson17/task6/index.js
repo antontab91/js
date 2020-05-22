@@ -24,3 +24,5 @@ export function bind(fn, context) {
 // }
 
 // http://jsraccoon.ru/interview-bind  - в этой статье теория о том как написать эту функцию , которая мне помогла . 
+
+
