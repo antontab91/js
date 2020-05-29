@@ -60,8 +60,7 @@ function onToggleTask(event) {
     return task.id === checkboxId;
   });
 
-  task.done = event.target.chaked;
-
+  task.done = event.target.checked;
   renderTasks(tasks);
 }
 
