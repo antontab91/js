@@ -5,8 +5,10 @@
 //4. checkbox handler - update task in the array and render tasks
 //5. create handler - create task object and put to the array and render tasks
 
-const todoListElem = document.querySelector('.list');
+
 const listElem = document.querySelector('.list');
+const btnCreate = document.querySelector('.create-task-btn');
+let taskInput = document.querySelector('.task-input');
 
 
 let tasks = [
@@ -62,3 +64,16 @@ function onToggleTask(event) {
 
   renderTasks(tasks);
 }
+
+function onCreateTask(event) {
+  if (taskInput.value === '') {
+    return;
+  }
+  tasks.push({ text: taskInput.value, done: false });
+  console.log(tasks);
+  renderTasks(tasks);
+  // console.log(tasks);
+  taskInput.value = '';
+}
+
+btnCreate.addEventListener('click', onCreateTask);
