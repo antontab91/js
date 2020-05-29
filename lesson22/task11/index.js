@@ -61,7 +61,12 @@ function confirmChecked(event) {
 
 listElem.addEventListener('click', confirmChecked);
 
-
+//todo list algo
+//1. create array of tasks - and create 5 test tasks 
+//2. write render fucn that render all tasks - function renderTasks (tasks)
+//3. addEventListener for all checkbox  
+//4. checkbox handler - update task in the array and render tasks
+//5. create handler - create task object and put to the array and render tasks
 
 
 // let tasks = [
