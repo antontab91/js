@@ -19,6 +19,17 @@ function getStudentsBirthDays(studentsList) {
         }
     }, {});
 
+    for (let month in studensObj) {
+        const sortedStudents = studensObj[month].sort((a, b) => {
+            return (
+                new Date(a.birthDate).getDate() -
+                new Date(b.birthDate).getDate()
+            );
+        });
+        const studentsNames = sortedStudents.map((student) => student.name);
+        studensObj[month] = studentsNames;
+    }
+
     return studentsObj;
 }
 
