@@ -7,7 +7,7 @@
 
 const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
-function getStudentsBirthDays(studentsList) {
+export function getStudentsBirthDays(studentsList) {
     const studentsObj = studentsList.reduce((acc, student) => {
         // console.log(student);
         const monthNumber = new Date(student.birthDate).getMonth();
