@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event delegation</title>
+  <style>
+    .list-item {
+      margin: 8px;
+      border: 3px solid #ccc;
+    }
+
+    .list {
+      border: 3px solid coral;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="list">
+    <li class="list-item">1</li>
+    <li class="list-item">2</li>
+    <li class="list-item">3</li>
+  </ul>
+  <script>
+    const listElem = document.querySelector('.list');
+    const itemElems = document.querySelectorAll('.list-item');
+    console.log(itemElems);
+    function sayHi(event) {
+      console.log(event.target.textContent);
+    }
+    itemElems.forEach((listItemElem) => {
+      listItemElem.addEventListener('click', sayHi)
+    });
+
+    function onListClick() {
+      console.log('list');
+    }
+
+    listElem.addEventListener('click', onListClick);
+
+    window.addEventListener('click', () => {
+      console.log('window');
+    });
+    window.addEventListener('click', (e) => {
+      e.stopPropagation();
+      console.log('window');
+    }, true);
+    document.addEventListener('click', () => {
+      console.log('document');
+    });
+
+
+
+  </script>
+</body>
+
+</html>
