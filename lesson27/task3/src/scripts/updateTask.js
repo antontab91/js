@@ -1,32 +1,24 @@
-import { renderTasks } from './renderer.js';
-import { getItem, setItem } from './renderer.js';
+import { renderListItems, listElem } from './renderer.js';
+import { sortTask } from './renderer.js'
+import { setItem, getItem } from './storage.js'
 
+const checkboxAllElem = document.querySelector('.list');
 
-export const onToggleTask = (event) => {
-    const isCheckbox = event.target.classList.contains('.list__item-checkbox');
-
-    if (!isCheckbox) {
-        return;
-    }
-
+export const getChecked = (event) => {
+    const listTaskNow = event.target.closest('.list__item');
+    listTaskNow.classList.toggle('list__item_done')
     const tasksList = getItem('tasksList');
-    const newTasksList = tasksList
-        .map((task) => {
-            if (task.id === event.target.dataset.id) {
-                const done = event.target.checked;
+    doneTask(tasksList, listTaskNow);
+    setItem('tasksList', tasksList);
+    listElem.innerHTML = '';
+    renderListItems(sortTask());
+}
+checkboxAllElem.addEventListener('click', getChecked);
 
-                return {
-                    ...task,
-                    done,
-                    finishDate: done ?
-                        new Date().toISOString
-                        : null
-                };
-            }
-            return task;
-        });
-
-    setItem('tasksList', newTasksList);
-
-    renderTasks();
+const doneTask = (listTask, checkboxItem) => {
+    listTask.forEach(elem => {
+        if (elem.text === checkboxItem.textContent) {
+            elem.done = !elem.done;
+        }
+    });
 };

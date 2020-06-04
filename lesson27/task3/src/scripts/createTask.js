@@ -1,25 +1,20 @@
-import { renderTask } from './renderer.js';
-import { getItem, setItem } from './storage.js';
+import { setItem, getItem } from './storage.js'
+import { renderListItems, listElem } from './renderer.js';
 
-export const onCreateTask = () => {
-    const taskTitleInputElem = document.querySelector('.task-input');
+const btnCreateTask = document.querySelector('.create-task-btn');
+let task = document.querySelector('.task-input')
+btnCreateTask.addEventListener('click', createNewTask);
 
-    const text = taskTitleInputElem.value;
-
-    if (!text) {
-        return;
-    }
-
-    taskTitleInputElem.value = '';
-    const taskList = getItem('tasksList') || [];
-
-    const newTasksList = taskList.concat({
-        text,
+export function createNewTask() {
+    if (task.value == '') return;
+    const tasksList = getItem('tasksList') || [];
+    tasksList.push({
+        text: task.value,
+        dateCreate: new Date(),
         done: false,
-        createDate: new Date().toISOString(),
-        id: Math.random().toString()
     });
-
-    setItem('tasksList', newTasksList);
-    renderTask();
+    task.value = '';
+    setItem('tasksList', tasksList);
+    listElem.innerHTML = '';
+    renderListItems();
 };
