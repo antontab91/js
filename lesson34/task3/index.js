@@ -36,7 +36,6 @@ const sendFormData = (event) => {  // не забіть что функция , 
         .catch(() => {
             errorTextElem.textContent = 'Failed to create user';
             loginFormElem.reset();
-
             submitBtnElem.disabled = true;
         });
 
