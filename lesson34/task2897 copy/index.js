@@ -44,13 +44,37 @@ const formElem = document.querySelector('.login-form');
 const submitBtnElem = document.querySelector('.submit-button');
 const errorElem = document.querySelector('.error-text');
 
-
-function onFormSubmit(event) {
+function onInputChange(event) {
     console.log(event);
 }
+
 
 emailInput.addEventListener("input", onInputChange);
 passwordInput.addEventListener("input", onInputChange);
 nameInput.addEventListener("input", onInputChange);
+
+
+function onFormSubmit(event) {
+    console.log(event);
+    event.preventDefault();
+
+    let user = Object.fromEntries(new FormData(formElem));
+
+    console.log(user);
+
+    fetch(serverUrl, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json; charset=utf-8'
+        },
+        body: JSON.stringify(user),
+    });
+    .then((responce) => {
+        return responce.json()
+    })
+        .then((data) => {
+
+        })
+}
 
 formElem.addEventListener("submit", onFormSubmit);
