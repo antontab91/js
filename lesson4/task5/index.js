@@ -18,7 +18,7 @@
 
 
 
-const m = 10
+const m = 10;
 const n = 50;
 let i = m;
 let result = 0;
