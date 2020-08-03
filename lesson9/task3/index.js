@@ -35,6 +35,7 @@ function getCustomersList(customers) {
 
 }
 
-// console.log(getCustomersList(customers));
+console.log(getCustomersList(customers));
 
-// getCustomersList(customers);
+getCustomersList(customers);
+
