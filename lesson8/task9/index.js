@@ -1,6 +1,6 @@
-// const transaction = {
-//     value: 170
-// }
+const transaction = {
+    value: 170
+}
 
 
 function addPropertyV1(obj, key, value) {
